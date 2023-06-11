@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <link rel="icon" href="./../img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+    /* font-family: 'Poppins', sans-serif; */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        cursor: none !important;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+     :root {
+        --color-primary: #151515;
+        --color-secondary: #f1f1f1;
+        --color-dark: #111111;
+        --color-dark-1: #4b4b4b
+    }
+    
+     ::selection {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        text-shadow: 0 0 15px var(--color-secondary);
+    }
+    
+     ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background-color: var(--color-secondary);
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary);
+        border-radius: 2px;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-dark);
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--color-primary);
+    }
+    
+    li {
+        list-style: none;
+        color: var(--color-primary);
+    }
+    
+    #trailer {
+        height: 28px;
+        width: 28px;
+        background-color: transparent;
+        border: 2px solid var(--color-secondary);
+        border-radius: 20px 20px 20px 20px;
+        padding: 1.1rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 500ms ease;
+        box-shadow: 2px 5px 20px var(--color-primary);
+        -webkit-border-radius: 20px 20px 20px 20px;
+        -moz-border-radius: 20px 20px 20px 20px;
+        -ms-border-radius: 20px 20px 20px 20px;
+        -o-border-radius: 20px 20px 20px 20px;
+    }
+    
+    body:hover>#trailer {
+        opacity: 1;
+    }
+    
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--color-secondary);
+        /* prevent x-axis scroll */
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .head-nav {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        text-align: right;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        padding: 0.4em 2em;
+    }
+    
+    .head-nav i {
+        font-size: 42px;
+        text-transform: uppercase;
+    }
+    
+    .head-nav i:hover {
+        color: var(--color-dark-1);
+    }
+    
+    h2 {
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    /*  */
+    
+    .contact-page {
+        padding: 45px;
+        display: flex;
+    }
+    
+    .left-content h2,
+    .right-content h2 {
+        display: flex;
+        justify-content: center;
+        margin: auto 0 1em 0;
+    }
+    
+    .left-content,
+    .right-content {
+        width: 40%;
+        margin: 0 auto;
+    }
+    
+    .right-content p {
+        text-align: left;
+        font-size: 20px;
+        margin: 0.5em 1.5em;
+    }
+    
+    .right-content p>i {
+        font-size: 20px;
+    }
+    
+    .right-content p>span {
+        transition: 0.3s ease-in-out;
+    }
+    
+    .right-content p>span:hover {
+        color: var(--color-dark);
+        letter-spacing: 0.03em;
+    }
+    
+    .left-content {
+        margin-top: 2em;
+    }
+    
+    .left-content h2 {
+        display: none;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+    
+    .contact-form>input,
+    textarea,
+    .submit-btn {
+        padding: 0.5em;
+        margin: 0.5em 1.5em;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 0.1em solid var(--color-primary);
+    }
+    
+    .submit-btn {
+        font-size: 20px;
+        border: none;
+        margin: auto;
+        background: transparent !important;
+        border-bottom: 2px solid var(--color-primary);
+        border-radius: 0;
+        color: var(--color-primary);
+        width: 10rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .submit-btn:hover {
+        border-radius: 10px;
+        width: 12rem;
+        background: var(--color-primary) !important;
+        color: var(--color-secondary);
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-icons i {
+        font-size: 38px;
+        margin: 0.5em;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .social-icons i:hover {
+        scale: 1.2;
+    }
+    
+    .v-seperation {
+        height: 90%;
+    }
+    /* footer */
+    
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 1em 2em;
+        background: var(--color-primary);
+        color: var(--color-secondary);
+    }
+    
+    .footer-content>span {
+        margin: 0 0.2em;
+    }
+    
+    .footer-content>span:nth-child(2) {
+        font-weight: 600;
+    }
+    
+    @media screen and (max-width: 1500px) {
+        .contact-page {
+            display: block;
+            width: 100%;
+            margin: auto;
+        }
+        .left-content {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .left-content h2 {
+            display: flex;
+        }
+        .right-content h2 {
+            display: none;
+        }
+        .right-content {
+            width: 80%;
+            margin: 0 auto;
+        }
+        form {
+            margin-top: 45px 0;
+        }
+        .v-seperation {
+            height: 0 !important;
+            margin: 1.5em 0;
+        }
+    }
+    
+    @media screen and (max-width: 1100px) {
+        .contact-form {
+            margin-top: 0 2em !important;
+            padding-top: 0 !important;
+        }
+        .left-content {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .right-content {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        p {
+            text-align: start;
+            font-size: 18px !important;
+        }
+        h2 {
+            font-size: 32px;
+        }
+    }
+    
+    @media screen and (max-width: 650px) {
+        .contact-page {
+            padding: 1.5em 0;
+            margin: 0;
+        }
+        .contact-form {
+            padding: 1.5em 0;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- cursor trailer -->
+    <div id="trailer"></div>
+    <!--  -->
+
+    <header class="head-nav">
+        <h1>
+            #My<span style="color:#4b4b4b">Portfolio</span>
+        </h1>
+        <a href="/">
+            <i class="fa fa-home"></i>
+        </a>
+    </header>
+
+    <main>
+        <section class="contact-page">
+
+            <div class="left-content">
+                <h2>
+                    Get in <span style="color:#7c7c7c;">&nbsp;Touch</span>
+                </h2>
+                <form action="" class="contact-form">
+                    <input type="text" class="fullname" id="fullname" placeholder="Full Name">
+
+                    <input type="email" class="email" id="email" placeholder="Email">
+
+                    <input type="tel" class="phone" id="phone" placeholder="Contact Number">
+
+                    <input type="text" class="subject" id="subject" placeholder="Subject">
+
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" style=" resize: none;"></textarea>
+                    <br>
+                    <button type="submit" class="submit-btn">
+                        <i class="fa fa-send-o"></i> Submit
+                    </button>
+                </form>
+            </div>
+
+            <hr class="v-seperation">
+
+            <div class="right-content">
+                <h2>
+                    Get in <span style="color:#7c7c7c">&nbsp;Touch</span>
+                </h2>
+                <p>
+                    My hard work and creativity will give you satisfactory results. If you have any project in mind to collaborate, CONTACT ME.
+                </p>
+                <br>
+                <p>
+                    <strong> Location:</strong> <br>
+                    <i class="fa fa-location-arrow"></i> &nbsp;<span>Nagarjun-04, Kathmandu, Nepal</span>
+                </p>
+                <p>
+                    <strong> Email:</strong> <br>
+                    <i class="fa fa-envelope"></i>&nbsp;<span class="mailto">
+                        <a href="mailto:pradhan.nischal.613@gmail.com" target="_blank">pradhan.nischal.613@gmail.com</a>
+                    </span>
+                </p>
+                <p>
+                    <strong> Phone:</strong> <br>
+                    <i class="fa fa-phone"></i>&nbsp;<span class="tel">
+                        <a href="tel:+977 9860869137" target="_blank">
+                        +977 9860869137</a>
+                    </span>
+                </p>
+                <p>
+                    <strong> Education:</strong> <br>
+                    <i class="fa fa-graduation-cap"></i>&nbsp;<span class="share-location">
+                        <a href="https://goo.gl/maps/jFN3zSFop6v87wGt8?coh=178572&entry=tt" target="_blank">
+                        Islington College, Kamal Pokhari, Kathmandu</a>
+                    </span>
+                </p>
+                <p>
+                    <strong> Hobbies:</strong> <br>
+                    <i class="fa fa-gamepad"></i>&nbsp;
+                    <span>Books || Musics || Sports || Games</span>
+                </p>
+                <br>
+                <hr style="margin-bottom: 10px;">
+                <div class="social-icons">
+                    <span>
+                        <a href="https://github.com/Nischal-Pradhan"
+                        target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://www.linkedin.com/in/nischal-pradhan-944b651b3"
+                        target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://open.spotify.com/user/xovu5mw9u6g7q4knojn37ur3d"
+                        target="_blank">
+                            <i class="fa fa-spotify"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://twitter.com"
+                        target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://instagram.com"
+                        target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </span>
+                </div>
+                <br>
+                <footer>
+                    <div class="footer-content">
+                        <span class="footer-c">©All rights reserved</span>
+                        <span class="footer-name" style="text-decoration: underline; text-underline-offset: 4px;">Nischal Pradhan</span>
+                        <span class="footer-aim">Software Developer</span>
+                    </div>
+                </footer>
+
+                <!--  -->
+
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+
+<script>
+    //cursor trailer animation
+    const trailer = document.getElementById("trailer");
+
+    window.onmousemove = e => {
+        const x = e.clientX - trailer.offsetWidth / 2;
+        const y = e.clientY - trailer.offsetHeight / 2;
+
+        const keyframes = {
+            transform: `translate(${x}px, ${y}px)`
+        }
+
+        trailer.animate(keyframes, {
+            duration: 0,
+            fill: "forwards"
+        })
+    }
+</script>
+
+</html>

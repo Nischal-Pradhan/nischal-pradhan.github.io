@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nischal-Pradhan</title>
+
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" async></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- cursor trailer -->
+    <div id="trailer">
+    </div>
+
+    <!-- go to top -->
+    <button onclick="goToTop()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+    <!--  -->
+
+    <header class="head-nav">
+        <h1>
+            #My<span style="color:#4b4b4b">Portfolio</span>
+        </h1>
+        <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    </header>
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <div id="nav-menu" class="overlay">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">
+                <span style="font-size: 42px;
+                        color: rgb(255, 255, 255);">
+                    H</span>ome
+            </a>
+            <a href="#about">
+                <span style="font-size: 42px;
+                            color: rgb(255, 255, 255);">
+                    A</span>bout
+            </a>
+            <a href="#projects">
+                <span style="font-size: 42px;
+                        color: rgb(255, 255, 255);">
+                    P</span>rojects
+            </a>
+            <a href="#blog">
+                <span style="font-size: 42px;
+                        color: rgb(255, 255, 255);">
+                    B</span>log
+            </a>
+            <a href="#contact">
+                <span style="font-size: 42px;
+                        color: rgb(255, 255, 255);">
+                    C</span>ontact
+            </a>
+        </div>
+    </div>
+
+    <section class="container home-section" id="home">
+        <div class="imgIcon">
+            <img src="./img/iconpp.png" alt="profile-pic">
+        </div>
+        <h1 class="name">
+            <span class="greetings">,</span>
+            <br>
+            <span class="my-info"> I'm <span style="text-transform: uppercase; color: #4b4b4b; letter-spacing: 0.08em;">Nischal Pradhan</span></span>
+            <br>
+            <div class="aim">
+                <span>Software Developer & Designer</span>
+            </div>
+            <div class="btn-download">
+                <a href="./docs/CV-Nischal-Pradhan.pdf" target="_blank">
+                    <button class="download-btn">Download CV&nbsp;
+                    <i class="fa fa-file-pdf-o" style="font-size:24px"></i></button>
+                </a>
+            </div>
+        </h1>
+
+        <div class="mouse_scroll">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h1>
+            About<span style="color:#4b4b4b">&nbsp;Me</span>
+        </h1>
+        <div class="flex-container">
+            <div class="left-flex">
+                <h1>INFORMATION ABOUT ME</h1>
+                <hr style="margin: 1em 0;">
+                <p>
+                    I'm a Software Developer, I am an Enthusiastic, Self-Motivated and Devoted graduated Student and Software Developer, passionate about learning new technologies and skills to apply in technological field of Software Developments. I am eager to learn advance
+                    techniques in the field of Software to revolutionize industries by tackling problems and solving them simultaneously. </p>
+                <br>
+                <q>Learning Never Stops. Always try to get better then yesterday. Train your mind to always be motivated, generate new ideas and build confidence. Whatever your capabilities, you must stretch them to the limit and a little beyond. Have a bright vision and be the best version of yourself.</q>
+                <br>
+                <a href="./components/about.html">
+                    <button class="learn-btn">
+                    Learn More&nbsp;
+                    <i class="fa fa-caret-right"></i>
+                    <span class="tooltip">
+                        <i class="fa fa-link"></i>&nbsp;My Skills and More...
+                    </span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="right-flex">
+                <img src="./img/hero.jpeg" alt="pp-nischalpradhan">
+            </div>
+        </div>
+    </section>
+
+    <hr style="width: 50%; margin-left:25%;">
+
+    <section id="projects" class="project-section">
+        <h1>
+            My<span style="color:#4b4b4b">&nbsp;Projects</span>
+        </h1>
+
+        <div class="flex-container content-above" id="contentAbove">
+            <div class="card flex-1">
+                <div class="card-content pr-react">
+                    Learning ReactJS w/ APOD API
+                    <br>
+                    <a href="https://github.com/Nischal-Pradhan/Learn-with-APOD-api-main.git" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <br>
+                    <span>React Application</span>
+                </div>
+            </div>
+            <div class="card flex-2">
+                <div class="card-content">
+                    Movie Recommendation System
+                    <br>
+                    <a href="https://github.com/Nischal-Pradhan/movie-recommendation-system.git" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <br>
+                    <span>ML & AI (Collaborative Filtering)</span>
+                </div>
+            </div>
+            <div class="card flex-3">
+                <div class="card-content">
+                    Yatayat(Bus) Management System
+                    <br>
+                    <a href="https://github.com/Nischal-Pradhan/Yatayat-Management-System-fyp.git" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <br>
+                    <span>Python Django `FYP`</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container content-below" id="contentBelow">
+            <div class="card flex-4">
+                <div class="card-content">
+                    Personal Portfolio
+                    <br>
+                    <a href="https://github.com/Nischal-Pradhan/Nischal-Pradhan.github.io.git" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <br>
+                    <span>Html - Css - Js</span>
+                </div>
+            </div>
+            <div class="card flex-5">
+                <div class="card-content">
+                    Image Slider
+                    <br>
+                    <a href="https://github.com/Nischal-Pradhan/vanilla-js-image-slider.git" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <br>
+                    <span>Vanilla javascript</span>
+                </div>
+            </div>
+            <div class="card flex-6">
+                <div class="hover-items">
+                    <h3>Other Projects Lists: </h3>
+                    <div class="icons">
+                        <ul style="text-align: center; font-size: 14px;">
+                            <hr style="width: 80%; margin-left:10%;">
+                            <li>
+                                Python
+                                <br> Tic Tac Toe, URL-Shortener(Flask API)
+                            </li>
+
+                            <hr style="width: 50%; margin-left:25%;">
+                            <li>
+                                Java
+                                <br> Calculator, Currency-Converter, SpringBoot (Internship - Angular Developer)
+                            </li>
+
+                            <hr style="width: 50%; margin-left:25%;">
+                            <li>
+                                Linux Shell Application GUI
+                                <br> Interactive UNIX environment to execute i/0
+                            </li>
+
+                            <hr style="width: 50%; margin-left:25%;">
+                            <li>
+                                C# Desktop Application
+                                <br> Recreation Center, C# Web Application
+                            </li>
+
+                            <hr style="width: 50%; margin-left:25%;">
+                            <a href="./components/projects.html" class="more-projects">
+                                <li>
+                                    More...&nbsp;<i class="fa fa-link" style="font-size:12px;"></i>
+                                </li>
+                            </a>
+
+                            <hr style="width: 50%; margin-left:25%;">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="./components/projects.html" class="button-projects">
+            <button class="more-projects" id="moreProjectBtn" onclick="toggleContent()">
+            Find More &nbsp;<i class="fa fa-caret-right"></i>
+        </button>
+        </a>
+    </section>
+
+
+    <!-- <hr style="width: 50%; margin-left:25%;"> -->
+    <section id="blog" class="blog-section">
+        <h1>
+            B<span style="color:#4b4b4b">log</span>
+        </h1>
+        <div class="blogs">
+            <div class="blog">
+                <img src="img/h1.gif" alt="">
+                <div class="blog-text">
+                    <h4>
+                        Get started with Web Designing and Web Development
+                    </h4>
+                    <hr>
+                    <p>
+                        To Create your first Web Site, You need to learn the Basic of HTML, CSS and JavaScript. Before starting a project ones should have an idea of what the project is going to look like and idea behind the project should be mesmerized. <br>                        To become expert in Web Design, you need to practice Web Designing Tools each and every day. If not 10-12 hours, but for at least for 2 hours each day. And increase the time of learning slowly with time.
+                    </p>
+                </div>
+            </div>
+            <div class="blog">
+                <img src="img/h2.gif" alt="">
+                <div class="blog-text">
+                    <h4>
+                        Learn Developing/Designing Tools and Technologies
+                    </h4>
+                    <hr>
+                    <p>
+                        There are lots of tools and technologies available for learning and mastering programming skills. These tools get updated and modified over the year with new features and bug free softwares. For designing the wireframes or prototypes, there are few I
+                        would like to recommend like Adobe XD, Figma, Basamiq. I have used these tools in the past projects that I have done and is still using some of them to make better wireframes and prototypes for the projects. Programmers should
+                        learn IDEs/text-editors, programming languages and other tools like frameworks, designing and developing a program. Learn Figma, Adobe XD for creating the wireframes and prototypes for the project before implementing Designing
+                        and developing Web Applications.
+                    </p>
+                </div>
+            </div>
+            <div class="blog">
+                <img src="img/h3.gif" alt="">
+                <div class="blog-text">
+                    <h4>
+                        Learn Web Development Frameworks
+                    </h4>
+                    <hr>
+                    <p>
+                        Simply, a Framework is a tool, that provides ready-made components or solutions that are customized in order to speed up development. Frameworks amy as well include libraries or packages build within. Some of the frameworks that I have worked with are
+                        <br> "Django" Python Framework<br> "Flask" Python Framework<br> "React" JavaScript Framework<br> "Angular" TypeScript Framework<br> "SpringBoot" Java Framework . . .
+                    </p>
+                </div>
+            </div>
+            <div class="blog">
+                <img src="img/h4.gif" alt="">
+                <div class="blog-text">
+                    <h4>
+                        Finding Errors/Bugs and Solving Errors and Debugging
+                    </h4>
+                    <hr>
+                    <p>
+                        There will arise many bugs while programming, you need to have courage to solve them. Inspect Web browser for any bug that may arise while learning website designing. Try to solve by looking up for the errors in the console of any web browsers. You will
+                        eventually get to know bugs and to solve them.
+                    </p>
+                </div>
+            </div>
+            <div class="blog">
+                <img src="img/h5.gif" alt="">
+                <div class="blog-text">
+                    <h4>
+                        Researching || Problem Solving || Information Using
+                    </h4>
+                    <hr>
+                    <p>
+                        Research is the most important skill to learn. Everything everywhere requires researching skills. If one have good researching skills, they can find errors and solve them quick enough. Surf the internet, build the researching skills and get new ideas
+                        and implementing information in your project. Internet has all if not most of (99.98%) of the things you want to know. By the perfect keywords typed and ideas, any answers can be found online. There are many creative individuals
+                        who could provide many different ideas and can help you make your problems/errors in your projects.
+                    </p>
+                </div>
+            </div>
+            <div class="blog">
+                <img src="img/h6.gif" alt="">
+                <div class="blog-text">
+                    <h4>
+                        Mastering different Programming Languages
+                    </h4>
+                    <hr>
+                    <p>
+                        Learning various languages could be difficult. But once you learn one programming language like C or Python, the ideas you get of programming could be implemented for all if not most programming languages. Some syntax might be different but the technique
+                        and ideas would be the same. So while learning to code, focus on how the program is working, what 'this' function or class is doing, why this code is running and the other is not running. Learn to communicate with other, ask questions,
+                        clear confusions, solve problems and anybody can improve the skill of programming. Learn front-end programming and back-end programming. Learn what language can be used in front and back -end of the program.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <hr style="width: 80%; margin-left:10%;">
+        <h1>
+            Get in <span style="color:#7c7c7c">&nbsp;Touch</span>
+        </h1>
+        <a href="./components/contact.html" class="button-contact">
+            <button class="contact-me" id="contactmebtn">
+            Contact Me &nbsp;<i class="fa fa-paper-plane"></i>
+            </button>
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="left-content">
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nischal-pradhan-944b651b3" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://github.com/Nischal-Pradhan" target="_blank"><i class="fa fa-github"></i></a></li>
+                </ul>
+                <p class="phone-footer">
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:+977 9860869137" style="
+                color: #f6f6f6;">&nbsp; +977 9860869137
+                </a>
+                </p>
+                <p class="email-footer">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:pradhan.nischal.613@example.com" style="color: #f6f6f6;">&nbsp; pradhan.nischal.613@gmail.com
+                </a>
+                </p>
+            </div>
+            <div class="right-content">
+                <span class="footer-c">©All rights reserved</span>
+                <h3 class="footer-name">Nischal Pradhan</h3>
+                <p class="footer-aim">Software Developer</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+</body>
+
+</html>
