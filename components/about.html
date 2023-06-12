@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
 
-    <link rel="icon" href="./../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./../img/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <style>
@@ -28,7 +28,7 @@
         --color-primary: #151515;
         --color-secondary: #f1f1f1;
         --color-dark: #111111;
-        --color-dark-1: #4b4b4b
+        --color-dark-1: #4b4b4b;
     }
     
      ::selection {
@@ -211,6 +211,25 @@
         font-size: 20px;
         text-align: center;
     }
+    /* footer */
+    
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 0.5em 2em 1em 2em;
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        border-top: 1px solid var(--color-secondary);
+    }
+    
+    .footer-content>span {
+        margin: 0 0.2em;
+    }
+    
+    .footer-content>span:nth-child(2) {
+        font-weight: 600;
+    }
     
     @media screen and (max-width: 1560px) {
         .top-area {
@@ -287,15 +306,12 @@
 </style>
 
 <body>
-
     <!-- cursor trailer -->
     <div id="trailer"></div>
     <!--  -->
 
     <header class="head-nav">
-        <h1>
-            #My<span style="color:#4b4b4b">Portfolio</span>
-        </h1>
+        <h1>#My<span style="color: #4b4b4b">Portfolio</span></h1>
         <a href="/">
             <i class="fa fa-home"></i>
         </a>
@@ -305,156 +321,166 @@
         <section class="about-page">
             <div class="top-area">
                 <div class="left-area">
-                    <h2>
-                        About Me
-                    </h2>
-                    <p>I'm a Software Developer, I am an Enthusiastic, Self-Motivated and Devoted graduated Student and Software Developer, passionate about learning new technologies and skills to apply in technological field of Software Developments. I
-                        am eager to learn advance techniques in the field of Software to revolutionize industries by tackling problems and solving them simultaneously. </p>
-                    <br>
-                    <q>Learning Never Stops. Always try to get better then yesterday. Train your mind to always be motivated, generate new ideas and build confidence. Whatever your capabilities, you must stretch them to the limit and a little beyond. Have a bright vision and be the best version of yourself.</q>
-                </div>
-
-                <div class="right-area">
-                    <h2>
-                        Education Qualifications
-                    </h2>
-                    <div style="margin: 1.5em 0;">
-                        <span style="text-transform: uppercase;">
-                            [Bachelors] Islington College
-                        </span>
-                        <h4>
-                            BSc (HONS.) IT, COMPUTING
-                            <span>
-                                [2019 - 2022]
-                            </span>
-                        </h4>
-                        <span style="font-size: 16px;">
-                            Kamal Pokhari, Kathmandu
-                        </span>
-                    </div>
-
-                    <div>
-                        <span style="text-transform: uppercase;">
-                            [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
-                        </span>
-                        <h4>
-                            +2 Science
-                            <span>
-                                [2017 – 2019]
-                            </span>
-                        </h4>
-                        <span style="font-size: 16px;">
-                            Dillibazar, Kathmandu
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="middle-area">
-                <div class="left-middle" style="width: 50%;">
-                    <h2>
-                        Skills
-                    </h2>
-
-                    <hr style="
-                        display: flex;
-                        width: 25px;
-                        padding: 0.1em;
-                        border: none;
-                        background-color: var(--color-primary);
-                        margin: 0 auto 1.2em auto;
-                    " class="hor-line">
-
-                    <div class="about-skills" style="display: flex; justify-content: center; text-align: center;">
-                        <ul style="text-transform: uppercase;">
-                            <li>HTML5</li>
-                            <li>CSS3, SCSS</li>
-                            <li>JavaScript</li>
-                            <li>BOOTSTRAP, TAILWIND</li>
-                            <li>REACT, NEXT, NODE</li>
-                            <li>PYTHON, DJANGO</li>
-                            <li>Git, Github</li>
-                            <li>ORACLE SQL, MYSQL</li>
-                            <li>ADOBE PHOTOSHOP</li>
-                            <li>ADOBE ILLUSTRATOR</li>
-                            <li>ADOBE PREMIERE PRO</li>
-                            <li>FIGMA, ADOBE XD</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="right-middle" style="width: 50%;">
-                    <h2>
-                        Soft Skills
-                    </h2>
-
-                    <hr style="
-                        display: flex;
-                        width: 25px;
-                        padding: 0.1em;
-                        border: none;
-                        background-color: var(--color-primary);
-                        margin: 0 auto 1.2em auto;
-                    " class="hor-line">
-
-                    <div class="about-skills" style="display: flex; justify-content: center; text-align: center;">
-                        <ul style="text-transform: uppercase;">
-                            <li>MOTIVATED and ENTHUSIASTIC
-                            </li>
-                            <li>PROBLEM SOLVING</li>
-                            <li>CRITICAL THINKING</li>
-                            <li>TEAM WORKING</li>
-                            <li>POSITIVE ATTITUDE</li>
-                            <li>CONSCIENTIOUSNESS</li>
-                            <li>ADAPTABLE</li>
-                            <li>FLEXIBLE</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="bottom-area" style="
-            padding: 2.5em 5em;">
-                <h2>
-                    Experiences
-                </h2>
-                <div class="about-experiences">
-                    <h3>
-                        SB Solutions PVT. LTD. [FRONT-END ANGULAR DEVELOPER]
-                    </h3>
-                    <span>
-                        [JULY 2021 – NOVEMBER 2021]
-                    </span>
-                    <span>
-                        Dillibazar, Kathmandu
-                    </span>
+                    <h2>About Me</h2>
                     <p>
-                        As part of my job, I worked with senior developers and QA application testers to maintain front-end for existing projects and developed new front-end for new projects related to banking loan automation, loan approval, loan management and document management
-                        systems. I worked on Spring Boot framework and used tools such as the Intellij IDE, HTML, SASS, BOOTSTRAP, and Angular Typescript. During my early days at the company, I also worked as a tester for existing projects to be able
-                        to know the application and later work on similar projects.
+                        I'm a Software Developer, I am an Enthusiastic, Self-Motivated and Devoted graduated Student and Software Developer, passionate about learning new technologies and skills to apply in technological field of Software Developments. I am eager to learn advance
+                        techniques in the field of Software to revolutionize industries by tackling problems and solving them simultaneously.
                     </p>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
+                    <br />
+                    <q>Learning Never Stops. Always try to get better then yesterday.
+              Train your mind to always be motivated, generate new ideas and
+              build confidence. Whatever your capabilities, you must stretch
+              them to the limit and a little beyond. Have a bright vision and be
+              the best version of yourself.</q
+            >
+          </div>
 
-<script>
+          <div class="right-area">
+            <h2>Education Qualifications</h2>
+            <div style="margin: 1.5em 0">
+              <span style="text-transform: uppercase">
+                [Bachelors] Islington College
+              </span>
+              <h4>
+                BSc (HONS.) IT, COMPUTING
+                <span> [2019 - 2022] </span>
+              </h4>
+              <span style="font-size: 16px"> Kamal Pokhari, Kathmandu </span>
+            </div>
+
+            <div>
+              <span style="text-transform: uppercase">
+                [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
+              </span>
+              <h4>
+                +2 Science
+                <span> [2017 – 2019] </span>
+              </h4>
+              <span style="font-size: 16px"> Dillibazar, Kathmandu </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="middle-area">
+          <div class="left-middle" style="width: 50%">
+            <h2>Skills</h2>
+
+            <hr
+              style="
+                display: flex;
+                width: 25px;
+                padding: 0.1em;
+                border: none;
+                background-color: var(--color-primary);
+                margin: 0 auto 1.2em auto;
+              "
+              class="hor-line"
+            />
+
+            <div
+              class="about-skills"
+              style="display: flex; justify-content: center; text-align: center"
+            >
+              <ul style="text-transform: uppercase">
+                <li>HTML5</li>
+                <li>CSS3, SCSS</li>
+                <li>JavaScript</li>
+                <li>BOOTSTRAP, TAILWIND</li>
+                <li>REACT, NEXT, NODE</li>
+                <li>PYTHON, DJANGO</li>
+                <li>Git, Github</li>
+                <li>ORACLE SQL, MYSQL</li>
+                <li>ADOBE PHOTOSHOP</li>
+                <li>ADOBE ILLUSTRATOR</li>
+                <li>ADOBE PREMIERE PRO</li>
+                <li>FIGMA, ADOBE XD</li>
+              </ul>
+            </div>
+          </div>
+          <div class="right-middle" style="width: 50%">
+            <h2>Soft Skills</h2>
+
+            <hr
+              style="
+                display: flex;
+                width: 25px;
+                padding: 0.1em;
+                border: none;
+                background-color: var(--color-primary);
+                margin: 0 auto 1.2em auto;
+              "
+              class="hor-line"
+            />
+
+            <div
+              class="about-skills"
+              style="display: flex; justify-content: center; text-align: center"
+            >
+              <ul style="text-transform: uppercase">
+                <li>MOTIVATED and ENTHUSIASTIC</li>
+                <li>PROBLEM SOLVING</li>
+                <li>CRITICAL THINKING</li>
+                <li>TEAM WORKING</li>
+                <li>POSITIVE ATTITUDE</li>
+                <li>CONSCIENTIOUSNESS</li>
+                <li>ADAPTABLE</li>
+                <li>FLEXIBLE</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="bottom-area" style="padding: 2.5em 5em">
+          <h2>Experiences</h2>
+          <div class="about-experiences">
+            <h3>SB Solutions PVT. LTD. [FRONT-END ANGULAR DEVELOPER]</h3>
+            <span> [JULY 2021 – NOVEMBER 2021] </span>
+            <span> Dillibazar, Kathmandu </span>
+            <p>
+              As part of my job, I worked with senior developers and QA
+              application testers to maintain front-end for existing projects
+              and developed new front-end for new projects related to banking
+              loan automation, loan approval, loan management and document
+              management systems. I worked on Spring Boot framework and used
+              tools such as the Intellij IDE, HTML, SASS, BOOTSTRAP, and Angular
+              Typescript. During my early days at the company, I also worked as
+              a tester for existing projects to be able to know the application
+              and later work on similar projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <span class="footer-c">©All rights reserved</span>
+          <span
+            class="footer-name"
+            style="text-decoration: underline; text-underline-offset: 4px"
+            >Nischal Pradhan</span
+          >
+          <span class="footer-aim">Software Developer</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script>
     //cursor trailer animation
     const trailer = document.getElementById("trailer");
 
-    window.onmousemove = e => {
-        const x = e.clientX - trailer.offsetWidth / 2;
-        const y = e.clientY - trailer.offsetHeight / 2;
+    window.onmousemove = (e) => {
+      const x = e.clientX - trailer.offsetWidth / 2;
+      const y = e.clientY - trailer.offsetHeight / 2;
 
-        const keyframes = {
-            transform: `translate(${x}px, ${y}px)`
-        }
+      const keyframes = {
+        transform: `translate(${x}px, ${y}px)`,
+      };
 
-        trailer.animate(keyframes, {
-            duration: 0,
-            fill: "forwards"
-        })
-    }
-</script>
-
+      trailer.animate(keyframes, {
+        duration: 0,
+        fill: "forwards",
+      });
+    };
+  </script>
 </html>
