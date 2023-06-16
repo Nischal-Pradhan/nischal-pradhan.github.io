@@ -16,6 +16,19 @@
 
 </head>
 
+<style>
+    .fade-scroll-item {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    .fade-scroll-item.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
 <body>
 
     <!-- cursor trailer -->
@@ -98,7 +111,7 @@
         </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section id="about" class="about-section fade-scroll-item">
         <h1>
             About<span style="color:#4b4b4b">&nbsp;Me</span>
         </h1>
@@ -131,7 +144,7 @@
 
     <hr style="width: 50%; margin-left:25%;">
 
-    <section id="projects" class="project-section">
+    <section id="projects" class="project-section fade-scroll-item">
         <h1>
             My<span style="color:#4b4b4b">&nbsp;Projects</span>
         </h1>
@@ -245,7 +258,7 @@
 
 
     <!-- <hr style="width: 50%; margin-left:25%;"> -->
-    <section id="blog" class="blog-section">
+    <section id="blog" class="blog-section fade-scroll-item">
         <h1>
             B<span style="color:#4b4b4b">log</span>
         </h1>
@@ -333,7 +346,7 @@
             </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section fade-scroll-item">
         <hr style="width: 80%; margin-left:10%;">
         <h1>
             Get in <span style="color:#7c7c7c">&nbsp;Touch</span>
@@ -372,6 +385,31 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // scroll fade-in animation
+        const animatedItems = [];
+
+        function handleScroll() {
+            const items = document.querySelectorAll('.fade-scroll-item');
+
+            items.forEach(item => {
+                if (!animatedItems.includes(item) && isInViewport(item)) {
+                    item.classList.add('fade-in');
+                    animatedItems.push(item);
+                }
+            });
+        }
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            return rect.top < windowHeight && rect.bottom > 0;
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
 
 </body>
 
