@@ -88,6 +88,19 @@ body {
   /* prevent x-axis scroll */
   max-width: 100% !important;
   overflow-x: hidden !important;
+
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .progress-bar {
