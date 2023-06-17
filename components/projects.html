@@ -166,6 +166,20 @@
         border-radius: 15px;
         display: block;
         width: 100%;
+        animation: imgFadeIn ease 2.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes imgFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(150px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
     
     .overlay {
