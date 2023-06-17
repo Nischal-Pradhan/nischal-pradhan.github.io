@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,331 +9,332 @@
 
     <link rel="icon" href="./../img/favicon.ico" type="image/x-icon" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
 
-  <style>
+<style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
     /* font-family: 'Poppins', sans-serif; */
-
+    
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      cursor: none !important;
-      font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        cursor: none !important;
+        font-family: "Poppins", sans-serif;
     }
-
-    :root {
-      --color-primary: #151515;
-      --color-secondary: #f1f1f1;
-      --color-dark: #111111;
-      --color-dark-1: #4b4b4b;
+    
+     :root {
+        --color-primary: #151515;
+        --color-secondary: #f1f1f1;
+        --color-dark: #111111;
+        --color-dark-1: #4b4b4b;
     }
-
-    ::selection {
-      background: var(--color-primary);
-      color: var(--color-secondary);
-      text-shadow: 0 0 15px var(--color-secondary);
+    
+     ::selection {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        text-shadow: 0 0 15px var(--color-secondary);
     }
-
-    ::-webkit-scrollbar {
-      width: 12px;
+    
+     ::-webkit-scrollbar {
+        width: 12px;
     }
-
-    ::-webkit-scrollbar-track {
-      background-color: var(--color-secondary);
+    
+     ::-webkit-scrollbar-track {
+        background-color: var(--color-secondary);
     }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--color-primary);
-      border-radius: 2px;
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary);
+        border-radius: 2px;
     }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--color-dark);
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-dark);
     }
-
+    
     a {
-      text-decoration: none;
-      color: var(--color-primary);
+        text-decoration: none;
+        color: var(--color-primary);
     }
-
+    
     li {
-      list-style: none;
-      color: var(--color-primary);
+        list-style: none;
+        color: var(--color-primary);
     }
-
+    
     #trailer {
-      height: 28px;
-      width: 28px;
-      background-color: transparent;
-      border: 2px solid var(--color-secondary);
-      border-radius: 20px 20px 20px 20px;
-      padding: 1.1rem;
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 10000;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 500ms ease;
-      box-shadow: 2px 5px 20px var(--color-primary);
-      -webkit-border-radius: 20px 20px 20px 20px;
-      -moz-border-radius: 20px 20px 20px 20px;
-      -ms-border-radius: 20px 20px 20px 20px;
-      -o-border-radius: 20px 20px 20px 20px;
+        height: 28px;
+        width: 28px;
+        background-color: transparent;
+        border: 2px solid var(--color-secondary);
+        border-radius: 20px 20px 20px 20px;
+        padding: 1.1rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 500ms ease;
+        box-shadow: 2px 5px 20px var(--color-primary);
+        -webkit-border-radius: 20px 20px 20px 20px;
+        -moz-border-radius: 20px 20px 20px 20px;
+        -ms-border-radius: 20px 20px 20px 20px;
+        -o-border-radius: 20px 20px 20px 20px;
     }
-
-    body:hover > #trailer {
-      opacity: 1;
+    
+    body:hover>#trailer {
+        opacity: 1;
     }
-
+    
     body {
-      font-family: "Poppins", sans-serif;
-      background-color: var(--color-secondary);
-      /* prevent x-axis scroll */
-      max-width: 100% !important;
-      overflow-x: hidden !important;
+        font-family: "Poppins", sans-serif;
+        background-color: var(--color-secondary);
+        /* prevent x-axis scroll */
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        animation: fadeInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
-
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
     .head-nav {
-      background-color: var(--color-secondary);
-      color: var(--color-primary);
-      display: flex;
-      align-items: center;
-      text-align: right;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 9999;
-      padding: 0.4em 2em;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        text-align: right;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        padding: 0.4em 2em;
     }
-
+    
     .head-nav i {
-      font-size: 42px;
-      text-transform: uppercase;
+        font-size: 42px;
+        text-transform: uppercase;
     }
-
+    
     .head-nav i:hover {
-      color: var(--color-dark-1);
+        color: var(--color-dark-1);
     }
     /*  */
-
+    
     .more-projects h2 {
-      margin-top: 1.5em;
-      font-size: 36px;
-      text-transform: uppercase;
-      text-align: center;
+        margin-top: 1.5em;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
     }
-
-    .more-projects > hr {
-      display: flex;
-      justify-content: center;
-      width: 0%;
-      padding: 0.04em;
-      background-color: var(--color-primary);
-      height: 5em;
-      margin: 3em auto;
+    
+    .more-projects>hr {
+        display: flex;
+        justify-content: center;
+        width: 0%;
+        padding: 0.04em;
+        background-color: var(--color-primary);
+        height: 5em;
+        margin: 3em auto;
     }
     /*  */
-
+    
     .find-projects {
-      display: flex;
-      width: 80%;
-      margin: 6em auto 10em auto;
+        display: flex;
+        width: 80%;
+        margin: 6em auto 10em auto;
     }
-
+    
     .project {
-      position: relative;
-      width: 50%;
+        position: relative;
+        width: 50%;
     }
-
+    
     .project img {
-      border-radius: 15px;
-      display: block;
-      width: 100%;
+        border-radius: 15px;
+        display: block;
+        width: 100%;
     }
-
+    
     .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: 0.5s ease;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: 0.5s ease;
     }
-
-    .overlay > img {
-      width: 100%;
+    
+    .overlay>img {
+        width: 100%;
     }
-
+    
     .project:hover .overlay {
-      opacity: 1;
-      scale: 1.2;
+        opacity: 1;
+        scale: 1.2;
     }
-
+    
     .find-projects .info {
-      width: 40%;
-      text-align: center;
-      margin: 2em auto;
-      font-size: 20px;
+        width: 40%;
+        text-align: center;
+        margin: 2em auto;
+        font-size: 20px;
     }
-
-    .info span > a {
-      font-weight: 600;
-      transition: 0.3s ease-in-out;
+    
+    .info span>a {
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
     }
-
-    .info span > a:hover {
-      letter-spacing: 0.03em;
+    
+    .info span>a:hover {
+        letter-spacing: 0.03em;
     }
-
+    
     .mobile-hrline {
-      display: none !important;
+        display: none !important;
     }
     /* footer */
-
+    
     .footer-content {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      padding: 1em 2em;
-      background: var(--color-primary);
-      color: var(--color-secondary);
-    }
-
-    .footer-content > span {
-      margin: 0 0.2em;
-    }
-
-    .footer-content > span:nth-child(2) {
-      font-weight: 600;
-    }
-
-    @media screen and (max-width: 1500px) {
-      .find-projects {
-        display: block;
-        width: 80%;
-        margin: 50px auto !important;
-      }
-      .project {
-        position: relative;
-        width: 70%;
-        margin: auto;
-      }
-      .project img {
-        border-radius: 15px;
-        display: block;
-        width: 100%;
-      }
-      .find-projects .info {
-        width: 100%;
+        display: flex;
+        justify-content: center;
         text-align: center;
-        margin: auto;
-        font-size: 20px;
-      }
-      .mobile-hrline {
-        display: block !important;
-        height: 1em !important;
-        margin: 0 auto 5em auto !important;
-        width: 25px !important;
-      }
+        padding: 1em 2em;
+        background: var(--color-primary);
+        color: var(--color-secondary);
     }
-
+    
+    .footer-content>span {
+        margin: 0 0.2em;
+    }
+    
+    .footer-content>span:nth-child(2) {
+        font-weight: 600;
+    }
+    
+    @media screen and (max-width: 1500px) {
+        .find-projects {
+            display: block;
+            width: 80%;
+            margin: 50px auto !important;
+        }
+        .project {
+            position: relative;
+            width: 70%;
+            margin: auto;
+        }
+        .project img {
+            border-radius: 15px;
+            display: block;
+            width: 100%;
+        }
+        .find-projects .info {
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            font-size: 20px;
+        }
+        .mobile-hrline {
+            display: block !important;
+            height: 1em !important;
+            margin: 0 auto 5em auto !important;
+            width: 25px !important;
+        }
+    }
+    
     @media screen and (max-width: 900px) {
-      .find-projects {
-        display: block;
-        width: 100%;
-        margin: 6em auto 10em auto;
-      }
-      .project {
-        position: relative;
-        width: 92%;
-        margin: auto;
-      }
-      .project img {
-        border-radius: 15px;
-        display: block;
-        width: 100%;
-      }
+        .find-projects {
+            display: block;
+            width: 100%;
+            margin: 6em auto 10em auto;
+        }
+        .project {
+            position: relative;
+            width: 92%;
+            margin: auto;
+        }
+        .project img {
+            border-radius: 15px;
+            display: block;
+            width: 100%;
+        }
     }
-
     /* image placeholder */
+    
     .image-container {
-      width: 300px;
-      /* Adjust as needed */
-      height: 300px;
-      /* Adjust as needed */
-      position: relative;
+        width: 300px;
+        /* Adjust as needed */
+        height: 300px;
+        /* Adjust as needed */
+        position: relative;
     }
-
+    
     .image-placeholder {
-      width: 100%;
-      height: 100%;
-      background-color: #f3f3f3;
+        width: 100%;
+        height: 100%;
+        background-color: #f3f3f3;
     }
-
+    
     .image-placeholder-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #333;
-      font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #333;
+        font-weight: bold;
     }
-  </style>
+</style>
 
-  <body>
+<body>
     <!-- cursor trailer -->
     <div id="trailer"></div>
     <!--  -->
 
     <header class="head-nav">
-      <h1>#My<span style="color: #4b4b4b">Portfolio</span></h1>
-      <a href="/">
-        <i class="fa fa-home"></i>
-      </a>
+        <h1>#My<span style="color: #4b4b4b">Portfolio</span></h1>
+        <a href="/">
+            <i class="fa fa-home"></i>
+        </a>
     </header>
 
     <main>
-      <section class="project-page">
-        <div class="more-projects">
-          <h2>More <span style="color: #4b4b4b">Projects</span></h2>
-          <hr />
+        <section class="project-page">
+            <div class="more-projects">
+                <h2>More <span style="color: #4b4b4b">Projects</span></h2>
+                <hr />
 
-          <!-- 01 -->
-          <div class="find-projects">
-            <div class="project">
-              <img
-                src="./../img/projects/reactAPOD-01.png"
-                alt="reactAPOD-01"
-              />
-              <div class="overlay">
-                <img
-                  src="./../img/projects/reactAPOD-02.png"
-                  alt="reactAPOD-02"
-                />
-              </div>
-            </div>
+                <!-- 01 -->
+                <div class="find-projects">
+                    <div class="project">
+                        <img src="./../img/projects/reactAPOD-01.png" alt="reactAPOD-01" />
+                        <div class="overlay">
+                            <img src="./../img/projects/reactAPOD-02.png" alt="reactAPOD-02" />
+                        </div>
+                    </div>
 
-            <div class="info">
-              <h3>Learning ReactJS w/ APOD API</h3>
-              <br />
-              <p>
-                APOD ("Astronomy Picture of the Day") is a popular website at
-                NASA. I used its API to retrieve data and imagery to display
-                Astronomy Picture of the Day in my ReactJS Project.
-              </p>
-              <br />
-              <hr style="width: 60%; margin: 0.5em auto" />
+                    <div class="info">
+                        <h3>Learning ReactJS w/ APOD API</h3>
+                        <br />
+                        <p>
+                            APOD ("Astronomy Picture of the Day") is a popular website at NASA. I used its API to retrieve data and imagery to display Astronomy Picture of the Day in my ReactJS Project.
+                        </p>
+                        <br />
+                        <hr style="width: 60%; margin: 0.5em auto" />
 
-              <span>
+                        <span>
                 <a
                   href="https://github.com/Nischal-Pradhan/Learn-with-APOD-api-main.git"
                   target="_blank"
@@ -341,25 +343,22 @@
                   >&nbsp; Go To Project
                 </a>
               </span>
-            </div>
-          </div>
+                    </div>
+                </div>
 
-          <hr class="mobile-hrline" />
-          <!-- 02 -->
-          <div class="find-projects">
-            <div class="info">
-              <h3>Movie Recommendation System (Jupyter)</h3>
-              <br />
-              <p>
-                This is an AI/ML College Project. In this project, I used
-                Collaborative-based recommendation system which recommends
-                likable movies to the users using K-means clustering which is an
-                unsupervised machine learning algorithm.
-              </p>
-              <br />
-              <hr style="width: 60%; margin: 0.5em auto" />
+                <hr class="mobile-hrline" />
+                <!-- 02 -->
+                <div class="find-projects">
+                    <div class="info">
+                        <h3>Movie Recommendation System (Jupyter)</h3>
+                        <br />
+                        <p>
+                            This is an AI/ML College Project. In this project, I used Collaborative-based recommendation system which recommends likable movies to the users using K-means clustering which is an unsupervised machine learning algorithm.
+                        </p>
+                        <br />
+                        <hr style="width: 60%; margin: 0.5em auto" />
 
-              <span>
+                        <span>
                 <a
                   href="https://github.com/Nischal-Pradhan/movie-recommendation-system"
                   target="_blank"
@@ -368,50 +367,35 @@
                   >&nbsp; Go To Project
                 </a>
               </span>
-            </div>
-            <div class="project">
-              <img
-                src="./../img/projects/movieRecommend-01.png"
-                alt="movieRecommend-01"
-              />
-              <div class="overlay">
-                <img
-                  src="./../img/projects/movieRecommend-02.png"
-                  alt="movieRecommend-02"
-                />
-              </div>
-            </div>
-          </div>
+                    </div>
+                    <div class="project">
+                        <img src="./../img/projects/movieRecommend-01.png" alt="movieRecommend-01" />
+                        <div class="overlay">
+                            <img src="./../img/projects/movieRecommend-02.png" alt="movieRecommend-02" />
+                        </div>
+                    </div>
+                </div>
 
-          <hr class="mobile-hrline" />
-          <!-- 03 -->
-          <div class="find-projects">
-            <div class="project">
-              <img
-                src="./../img/projects/managementSystem-01.png"
-                alt="managementSystem-01"
-              />
-              <div class="overlay">
-                <img
-                  src="./../img/projects/managementSystem-02.jpg"
-                  alt="managementSystem-02"
-                />
-              </div>
-            </div>
+                <hr class="mobile-hrline" />
+                <!-- 03 -->
+                <div class="find-projects">
+                    <div class="project">
+                        <img src="./../img/projects/managementSystem-01.png" alt="managementSystem-01" />
+                        <div class="overlay">
+                            <img src="./../img/projects/managementSystem-02.jpg" alt="managementSystem-02" />
+                        </div>
+                    </div>
 
-            <div class="info">
-              <h3>Yatayat(Bus) Management System</h3>
-              <br />
-              <p>
-                This is a Django Project (Final Year Project) for Yatayat
-                Management System. Informations about Sajha Yatayat, Buses
-                Routes are IRL informations and this project also contains
-                non-IRL contents like email and bus names.
-              </p>
-              <br />
-              <hr style="width: 60%; margin: 0.5em auto" />
+                    <div class="info">
+                        <h3>Yatayat(Bus) Management System</h3>
+                        <br />
+                        <p>
+                            This is a Django Project (Final Year Project) for Yatayat Management System. Informations about Sajha Yatayat, Buses Routes are IRL informations and this project also contains non-IRL contents like email and bus names.
+                        </p>
+                        <br />
+                        <hr style="width: 60%; margin: 0.5em auto" />
 
-              <span>
+                        <span>
                 <a
                   href="https://github.com/Nischal-Pradhan/Yatayat-Management-System-fyp"
                   target="_blank"
@@ -420,43 +404,33 @@
                   >&nbsp; Go To Project
                 </a>
               </span>
-            </div>
-          </div>
+                    </div>
+                </div>
 
-          <hr class="mobile-hrline" />
-          <!-- 02 -->
-          <div class="find-projects">
-            <div class="info">
-              <h3>Computer Vision (OpenCV)</h3>
-              <br />
-              <p>
-                This is a python application to access Mobile Camera via ipv4
-                address and use it as webcam, using pythons' openCV (cv2)
-                library which is a open source Computer Vision and Machine
-                Learning library.
-              </p>
-              <br />
-              <hr style="width: 60%; margin: 0.5em auto" />
-            </div>
-            <div class="project">
-              <img
-                src="./../img/projects/mobilewebcam-01.png"
-                alt="mobilewebcam-01"
-              />
-              <div class="overlay">
-                <img
-                  src="./../img/projects/mobilewebcam-02.png"
-                  alt="mobilewebcam-02"
-                />
-              </div>
-            </div>
-          </div>
+                <hr class="mobile-hrline" />
+                <!-- 02 -->
+                <div class="find-projects">
+                    <div class="info">
+                        <h3>Computer Vision (OpenCV)</h3>
+                        <br />
+                        <p>
+                            This is a python application to access Mobile Camera via ipv4 address and use it as webcam, using pythons' openCV (cv2) library which is a open source Computer Vision and Machine Learning library.
+                        </p>
+                        <br />
+                        <hr style="width: 60%; margin: 0.5em auto" />
+                    </div>
+                    <div class="project">
+                        <img src="./../img/projects/mobilewebcam-01.png" alt="mobilewebcam-01" />
+                        <div class="overlay">
+                            <img src="./../img/projects/mobilewebcam-02.png" alt="mobilewebcam-02" />
+                        </div>
+                    </div>
+                </div>
 
-          <hr class="mobile-hrline" />
-          <!-- 05 -->
+                <hr class="mobile-hrline" />
+                <!-- 05 -->
 
-          <span
-            style="
+                <span style="
               font-size: 26px;
               font-weight: 800;
               display: flex;
@@ -464,70 +438,55 @@
               text-decoration: overline;
               justify-content: center;
               margin: auto;
-            "
-          >
+            ">
             UI Designs
           </span>
 
-          <div class="find-projects">
-            <div class="project" style="margin: 1em 2em 1em 0">
-              <img
-                src="./../img/projects/figma-nuStyles-prototype.png"
-                alt="figma-nuStyles-prototype"
-              />
-              <div class="overlay" style="z-index: 9999">
-                <img
-                  src="./../img/projects/figma-nuStyles.png"
-                  alt="figma-nuStyles"
-                />
-              </div>
-            </div>
+                <div class="find-projects">
+                    <div class="project" style="margin: 1em 2em 1em 0">
+                        <img src="./../img/projects/figma-nuStyles-prototype.png" alt="figma-nuStyles-prototype" />
+                        <div class="overlay" style="z-index: 9999">
+                            <img src="./../img/projects/figma-nuStyles.png" alt="figma-nuStyles" />
+                        </div>
+                    </div>
 
-            <div class="project" style="margin: 1em 0 1em 2em">
-              <img
-                src="./../img/projects/figma-Yatayat-management-prtotype.png"
-                alt="figma-nuStyles-prototype"
-              />
-              <div class="overlay" style="z-index: 9999">
-                <img
-                  src="./../img/projects/figma-Yatayat-management-prtotype-book.png"
-                  alt="figma-nuStyles"
-                />
-              </div>
+                    <div class="project" style="margin: 1em 0 1em 2em">
+                        <img src="./../img/projects/figma-Yatayat-management-prtotype.png" alt="figma-nuStyles-prototype" />
+                        <div class="overlay" style="z-index: 9999">
+                            <img src="./../img/projects/figma-Yatayat-management-prtotype-book.png" alt="figma-nuStyles" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <div class="footer-content">
-          <span class="footer-c">©All rights reserved</span>
-          <span
-            class="footer-name"
-            style="text-decoration: underline; text-underline-offset: 4px"
-            >Nischal Pradhan</span
+        </section>
+        <footer>
+            <div class="footer-content">
+                <span class="footer-c">©All rights reserved</span>
+                <span class="footer-name" style="text-decoration: underline; text-underline-offset: 4px">Nischal Pradhan</span
           >
           <span class="footer-aim">Software Developer</span>
-        </div>
-      </footer>
+            </div>
+        </footer>
     </main>
-  </body>
+</body>
 
-  <script>
+<script>
     //cursor trailer animation
     const trailer = document.getElementById("trailer");
 
     window.onmousemove = (e) => {
-      const x = e.clientX - trailer.offsetWidth / 2;
-      const y = e.clientY - trailer.offsetHeight / 2;
+        const x = e.clientX - trailer.offsetWidth / 2;
+        const y = e.clientY - trailer.offsetHeight / 2;
 
-      const keyframes = {
-        transform: `translate(${x}px, ${y}px)`,
-      };
+        const keyframes = {
+            transform: `translate(${x}px, ${y}px)`,
+        };
 
-      trailer.animate(keyframes, {
-        duration: 0,
-        fill: "forwards",
-      });
+        trailer.animate(keyframes, {
+            duration: 0,
+            fill: "forwards",
+        });
     };
-  </script>
+</script>
+
 </html>
