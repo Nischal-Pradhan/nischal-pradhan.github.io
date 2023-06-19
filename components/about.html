@@ -130,11 +130,6 @@
         color: var(--color-dark-1);
     }
     
-    h2 {
-        font-size: 36px;
-        text-transform: uppercase;
-    }
-    
     .top-area {
         display: flex;
         flex-direction: row;
@@ -162,7 +157,7 @@
     }
     
     .right-area {
-        background: var(--color-primary);
+        background-color: var(--color-primary);
         color: var(--color-secondary);
         border-radius: 15px;
         width: 40%;
@@ -170,26 +165,108 @@
         margin: 5em 2em 0 0;
         text-align: justify;
         font-size: 20px;
-        padding: 5rem;
-        transform: translateY(0);
+        padding: 4rem 2rem 2rem 2rem;
+        transform: translateY(-65px);
         transition: 0.3s ease-in-out;
     }
+    /* infinite scroll text */
     
-    .right-area:hover {
-        transform: translateY(-15px);
-        scale: 1.01;
+    article {
+        max-width: 100%;
+        margin: 1em auto;
+        overflow: hidden;
+        position: relative;
+        min-height: 4em;
     }
     
-    .middle-area h2,
-    .bottom-area h2 {
+    .infiniteScroll-left {
+        white-space: nowrap;
+        position: absolute;
+        text-transform: uppercase;
+    }
+    
+    .infiniteScroll-left {
+        -webkit-animation: infiniteMove-left 8s linear infinite;
+        white-space: nowrap;
+        animation: infiniteMove-left 8s linear infinite alternate;
+    }
+    
+    @-webkit-keyframes infiniteMove-left {
+        from {
+            left: 0;
+        }
+        to {
+            left: -140px;
+        }
+    }
+    
+    @keyframes infiniteMove-left {
+        from {
+            left: 0;
+        }
+        to {
+            left: -140px;
+        }
+    }
+    
+    .infiniteScroll-right {
+        white-space: nowrap;
+        position: absolute;
+        top: 2em;
+        opacity: 0.4;
+        text-transform: uppercase;
+    }
+    
+    .infiniteScroll-right {
+        -webkit-animation: infiniteMove-right 8s linear infinite;
+        white-space: nowrap;
+        animation: infiniteMove-right 8s linear infinite alternate;
+    }
+    
+    @-webkit-keyframes infiniteMove-right {
+        from {
+            right: 0;
+        }
+        to {
+            right: -140px;
+        }
+    }
+    
+    @keyframes infiniteMove-right {
+        from {
+            right: 0;
+        }
+        to {
+            right: -140px;
+        }
+    }
+    
+    @keyframes early {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    
+    .early {
+        animation: fadeIn ease-in 1;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: 1.5s;
+    }
+    
+    .middle-area h2 {
         width: 80%;
         margin: auto;
         display: flex;
         justify-content: center;
+        font-size: 28px;
     }
     
     .middle-area {
-        margin: 5em;
+        margin: 2em auto 5em auto;
         display: flex;
     }
     
@@ -197,16 +274,37 @@
         font-size: 20px;
     }
     
+    .mid-left {
+        width: 50%;
+        border-right: 1px solid var(--color-dark-1);
+        text-align: center;
+    }
+    
+    .mid-right {
+        width: 50%;
+        border-left: 1px solid var(--color-dark-1);
+        text-align: center;
+    }
+    
+    .institute-name {
+        font-size: 24px;
+    }
+    
+    .institute-course {
+        font-size: 18px;
+    }
+    
     .bottom-area {
+        text-align: center;
         background-color: var(--color-primary);
         color: var(--color-secondary);
     }
     
-    .bottom-area h3 {
+    .bottom-area h2 {
         display: flex;
         justify-content: center;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 24px;
         text-align: center;
     }
     
@@ -243,76 +341,71 @@
         font-weight: 600;
     }
     
-    @media screen and (max-width: 1560px) {
+    @media screen and (max-width:1700px) {
         .top-area {
             display: block;
         }
         .left-area {
-            width: 100%;
-            text-align: center;
-            margin: 0;
-            padding: 0 5rem;
+            width: 80%;
+            margin: auto;
         }
         .right-area {
-            margin: auto;
             width: 60%;
-            text-align: center;
-            margin: 2.5em auto;
-            padding: 3rem;
+            margin: auto;
         }
-        .bottom-area {
-            margin: 0;
-            padding: 2.5em 0;
-        }
-        .about-experiences p {
-            width: 100%;
+        .right-area {
+            margin: 100px auto;
         }
     }
     
-    @media screen and (max-width: 960px) {
-        .left-area {
-            width: 100%;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+    @media screen and (max-width:1300px) {
+        .left-area,
+        .right-area {
+            width: 80%;
+            margin: auto;
         }
         .right-area {
-            width: 90%;
-            text-align: center;
-            margin: 5em auto;
-            padding: 2rem;
-            font-size: 18px !important;
+            margin: 100px auto;
         }
         .middle-area {
+            margin-top: -5em;
             display: block;
-            text-align: center;
+        }
+        .mid-left,
+        .mid-right {
+            width: 100%;
+            margin: auto;
+            border: none;
+        }
+        .mid-right {
+            margin-top: 5em;
+        }
+    }
+    
+    @media screen and (max-width:845px) {
+        .top-area>.left-area {
             width: 100%;
             margin: 0;
+            padding: 1.2em;
         }
-        .left-middle,
-        .right-middle {
-            margin: 2.5em auto;
+        .top-area>.right-area {
+            width: 94%;
+            margin: 100px auto;
         }
         .bottom-area {
+            padding: 2.5em 1.2em !important;
+        }
+    }
+    
+    @media screen and (max-width:420px) {
+        .top-area>.right-area {
+            border-radius: 0;
             width: 100%;
+            margin: 100px auto;
+            padding: 2.5em 0 1.5em 0 !important;
         }
-    }
-    
-    @media screen and (max-width: 900px) {
-        .bottom-area {
-            margin: 0 !important;
-            padding: 0.5em !important;
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .left-middle>h2,
-        .right-middle>h2 {
-            font-size: 26px !important;
-        }
-        .hor-line {
-            width: 20px !important;
-            margin: 10px auto 15px auto !important;
+        .middle-area {
+            margin: -5em 0 5em 0;
         }
     }
 </style>
@@ -340,159 +433,160 @@
                     </p>
                     <br />
                     <q>Learning Never Stops. Always try to get better then yesterday.
-              Train your mind to always be motivated, generate new ideas and
-              build confidence. Whatever your capabilities, you must stretch
-              them to the limit and a little beyond. Have a bright vision and be
-              the best version of yourself.</q
-            >
-          </div>
+                    Train your mind to always be motivated, generate new ideas and
+                    build confidence. Whatever your capabilities, you must stretch
+                    them to the limit and a little beyond. Have a bright vision and be
+                    the best version of yourself.</q>
+                </div>
 
-          <div class="right-area">
-            <h2>Education Qualifications</h2>
-            <div style="margin: 1.5em 0">
-              <span style="text-transform: uppercase">
-                [Bachelors] Islington College
-              </span>
-              <h4>
-                BSc (HONS.) IT, COMPUTING
-                <span> [2019 - 2022] </span>
-              </h4>
-              <span style="font-size: 16px"> Kamal Pokhari, Kathmandu </span>
+                <div class="right-area">
+
+                    <section class="early">
+                        <h2 style="text-align: center;">Tech Skills</h2>
+                        <hr style="
+                          display: flex;
+                          width: 25px;
+                          padding: 0.1em;
+                          border: none;
+                          background-color: var(--color-primary);
+                          margin: 0 auto -35px auto;
+                        " class="hor-line" />
+                        <article>
+                            <p class="infiniteScroll-right">
+                                &#x2022; HTML5 &#x2022; CSS3 &#x2022; SCSS &#x2022; JAVASCRIPT &#x2022; BOOTSTRAP &#x2022; TAILWIND &#x2022; REACT &#x2022; NEXT &#x2022; NODE &#x2022; PYTHON &#x2022; DJANGO &#x2022; GIT &#x2022; GITHUB &#x2022; ORACLE SQL &#x2022; MYSQL &#x2022; ADOBE
+                                PHOTOSHOP &#x2022; ADOBE ILLUSTRATOR &#x2022; ADOBE PREMIERE PRO &#x2022; FIGMA &#x2022; ADOBE XD
+                            </p>
+                        </article>
+                        <article>
+                            <p class="infiniteScroll-left">
+                                &#x2022; HTML5 &#x2022; CSS3 &#x2022; SCSS &#x2022; JAVASCRIPT &#x2022; BOOTSTRAP &#x2022; TAILWIND &#x2022; REACT &#x2022; NEXT &#x2022; NODE &#x2022; PYTHON &#x2022; DJANGO &#x2022; GIT &#x2022; GITHUB &#x2022; ORACLE SQL &#x2022; MYSQL &#x2022; ADOBE
+                                PHOTOSHOP &#x2022; ADOBE ILLUSTRATOR &#x2022; ADOBE PREMIERE PRO &#x2022; FIGMA &#x2022; ADOBE XD
+                            </p>
+                            <p class="infiniteScroll-right">&#x2022; HTML5 &#x2022; CSS3 &#x2022; SCSS &#x2022; JAVASCRIPT &#x2022; BOOTSTRAP &#x2022; TAILWIND &#x2022; REACT &#x2022; NEXT &#x2022; NODE &#x2022; PYTHON &#x2022; DJANGO &#x2022; GIT &#x2022; GITHUB &#x2022; ORACLE SQL
+                                &#x2022; MYSQL &#x2022; ADOBE PHOTOSHOP &#x2022; ADOBE ILLUSTRATOR &#x2022; ADOBE PREMIERE PRO &#x2022; FIGMA &#x2022; ADOBE XD
+                            </p>
+                        </article>
+
+                        <article>
+                            <marquee behavior="scroll" direction="left">&#x2022; HTML5 &#x2022; CSS3 &#x2022; SCSS &#x2022; JAVASCRIPT &#x2022; BOOTSTRAP &#x2022; TAILWIND &#x2022; REACT &#x2022; NEXT &#x2022; NODE &#x2022; PYTHON &#x2022; DJANGO &#x2022; GIT &#x2022; GITHUB &#x2022; ORACLE SQL
+                                &#x2022; MYSQL &#x2022; ADOBE PHOTOSHOP &#x2022; ADOBE ILLUSTRATOR &#x2022; ADOBE PREMIERE PRO &#x2022; FIGMA &#x2022; ADOBE XD</marquee>
+
+                            <marquee behavior="scroll" direction="right"> &#x2022; HTML5 &#x2022; CSS3 &#x2022; SCSS &#x2022; JAVASCRIPT &#x2022; BOOTSTRAP &#x2022; TAILWIND &#x2022; REACT &#x2022; NEXT &#x2022; NODE &#x2022; PYTHON &#x2022; DJANGO &#x2022; GIT &#x2022; GITHUB &#x2022; ORACLE SQL
+                                &#x2022; MYSQL &#x2022; ADOBE PHOTOSHOP &#x2022; ADOBE ILLUSTRATOR &#x2022; ADOBE PREMIERE PRO &#x2022; FIGMA &#x2022; ADOBE XD</marquee>
+                        </article>
+
+                        <article>
+                            <marquee behavior="scroll" direction="left">
+                                <img src="./../img/icons/hcj.png" alt="" height="55px">
+                                <img src="./../img/icons/react.png" alt="" height="50px">
+                                <img src="./../img/icons/next.png" alt="" height="50px" style="filter: invert(100%);">
+                                <img src="./../img/icons/node.png" alt="" height="50px">
+                                <img src="./../img/icons/python.png" alt="" height="50px">
+                                <img src="./../img/icons/django.png" alt="" height="50px">
+                                <img src="./../img/icons/bootstrap.png" alt="" height="50px">
+                                <img src="./../img/icons/tailwind.png" alt="" height="55px">
+                                <img src="./../img/icons/git.png" alt="" height="55px">
+                                <img src="./../img/icons/github.png" alt="" height="55px" style="filter: invert(100%);">
+                                <img src="./../img/icons/sql.png" alt="" height="55px">
+                                <img src="./../img/icons/ps.png" alt="" height="50px">
+                                <img src="./../img/icons/pr.png" alt="" height="50px">
+                                <img src="./../img/icons/xd.png" alt="" height="50px">
+                                <img src="./../img/icons/figma.png" alt="" height="50px">
+                            </marquee>
+                        </article>
+                    </section>
+                </div>
+            </div>
+            <div class="middle-area">
+                <div class="mid-left">
+                    <h2>Education Qualifications</h2>
+                    <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto; " class="hor-line " />
+                    <div style="margin: 1.5em 0; ">
+                        <span style="text-transform: uppercase; " class="institute-name ">
+                            [Bachelors] Islington College
+                        </span>
+                        <h4 class="institute-course ">
+                            BSc (HONS.) IT, COMPUTING
+                            <span> [2019 - 2022] </span>
+                        </h4>
+                        <span style="font-size: 18px " class="institute-location "> Kamal Pokhari, Kathmandu </span>
+                    </div>
+
+                    <div>
+                        <span style="text-transform: uppercase " class="institute-name ">
+                        [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
+                    </span>
+                        <h4 class="institute-course ">
+                            +2 Science
+                            <span> [2017 – 2019] </span>
+                        </h4>
+                        <span style="font-size: 18px " class="institute-location "> Dillibazar, Kathmandu </span>
+                    </div>
+                </div>
+                <div class="mid-right">
+                    <h2>Soft Skills</h2>
+
+                    <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto; " class="hor-line " />
+
+                    <div class="about-skills " style="display: flex; justify-content: center; text-align: center ">
+                        <ul style="text-transform: uppercase ">
+                            <li>MOTIVATED and ENTHUSIASTIC</li>
+                            <li>PROBLEM SOLVING</li>
+                            <li>CRITICAL THINKING</li>
+                            <li>TEAM WORKING</li>
+                            <li>POSITIVE ATTITUDE</li>
+                            <li>CONSCIENTIOUSNESS</li>
+                            <li>ADAPTABLE</li>
+                            <li>FLEXIBLE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="bottom-area" style="padding: 2.5em 5em">
+                <h2 style="font-size: 24px; ">Experiences</h2>
+                <div class="about-experiences ">
+                    <h3>SB Solutions PVT. LTD. [FRONT-END ANGULAR DEVELOPER]</h3>
+                    <span> [JULY 2021 – NOVEMBER 2021] </span>
+                    <span> Dillibazar, Kathmandu </span>
+                    <p>
+                        As part of my job, I worked with senior developers and QA application testers to maintain front-end for existing projects and developed new front-end for new projects related to banking loan automation, loan approval, loan management and document management
+                        systems. I worked on Spring Boot framework and used tools such as the Intellij IDE, HTML, SASS, BOOTSTRAP, and Angular Typescript. During my early days at the company, I also worked as a tester for existing projects to be able
+                        to know the application and later work on similar projects.
+                    </p>
+                </div>
+            </div>
             </div>
 
-            <div>
-              <span style="text-transform: uppercase">
-                [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
-              </span>
-              <h4>
-                +2 Science
-                <span> [2017 – 2019] </span>
-              </h4>
-              <span style="font-size: 16px"> Dillibazar, Kathmandu </span>
+        </section>
+        <footer>
+            <div class="footer-content ">
+                <span class="footer-c ">©All rights reserved</span>
+                <span class="footer-name " style="text-decoration: underline; text-underline-offset: 4px ">Nischal Pradhan</span
+              >
+              <span class="footer-aim ">Software Developer</span>
             </div>
-          </div>
-        </div>
-
-        <div class="middle-area">
-          <div class="left-middle" style="width: 50%">
-            <h2>Skills</h2>
-
-            <hr
-              style="
-                display: flex;
-                width: 25px;
-                padding: 0.1em;
-                border: none;
-                background-color: var(--color-primary);
-                margin: 0 auto 1.2em auto;
-              "
-              class="hor-line"
-            />
-
-            <div
-              class="about-skills"
-              style="display: flex; justify-content: center; text-align: center"
-            >
-              <ul style="text-transform: uppercase">
-                <li>HTML5</li>
-                <li>CSS3, SCSS</li>
-                <li>JavaScript</li>
-                <li>BOOTSTRAP, TAILWIND</li>
-                <li>REACT, NEXT, NODE</li>
-                <li>PYTHON, DJANGO</li>
-                <li>Git, Github</li>
-                <li>ORACLE SQL, MYSQL</li>
-                <li>ADOBE PHOTOSHOP</li>
-                <li>ADOBE ILLUSTRATOR</li>
-                <li>ADOBE PREMIERE PRO</li>
-                <li>FIGMA, ADOBE XD</li>
-              </ul>
-            </div>
-          </div>
-          <div class="right-middle" style="width: 50%">
-            <h2>Soft Skills</h2>
-
-            <hr
-              style="
-                display: flex;
-                width: 25px;
-                padding: 0.1em;
-                border: none;
-                background-color: var(--color-primary);
-                margin: 0 auto 1.2em auto;
-              "
-              class="hor-line"
-            />
-
-            <div
-              class="about-skills"
-              style="display: flex; justify-content: center; text-align: center"
-            >
-              <ul style="text-transform: uppercase">
-                <li>MOTIVATED and ENTHUSIASTIC</li>
-                <li>PROBLEM SOLVING</li>
-                <li>CRITICAL THINKING</li>
-                <li>TEAM WORKING</li>
-                <li>POSITIVE ATTITUDE</li>
-                <li>CONSCIENTIOUSNESS</li>
-                <li>ADAPTABLE</li>
-                <li>FLEXIBLE</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="bottom-area" style="padding: 2.5em 5em">
-          <h2>Experiences</h2>
-          <div class="about-experiences">
-            <h3>SB Solutions PVT. LTD. [FRONT-END ANGULAR DEVELOPER]</h3>
-            <span> [JULY 2021 – NOVEMBER 2021] </span>
-            <span> Dillibazar, Kathmandu </span>
-            <p>
-              As part of my job, I worked with senior developers and QA
-              application testers to maintain front-end for existing projects
-              and developed new front-end for new projects related to banking
-              loan automation, loan approval, loan management and document
-              management systems. I worked on Spring Boot framework and used
-              tools such as the Intellij IDE, HTML, SASS, BOOTSTRAP, and Angular
-              Typescript. During my early days at the company, I also worked as
-              a tester for existing projects to be able to know the application
-              and later work on similar projects.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="footer-content">
-          <span class="footer-c">©All rights reserved</span>
-          <span
-            class="footer-name"
-            style="text-decoration: underline; text-underline-offset: 4px"
-            >Nischal Pradhan</span
-          >
-          <span class="footer-aim">Software Developer</span>
-        </div>
-      </footer>
+        </footer>
     </main>
-  </body>
+</body>
 
-  <script>
+<script>
     //cursor trailer animation
     const trailer = document.getElementById("trailer");
 
     window.onmousemove = (e) => {
-      const x = e.clientX - trailer.offsetWidth / 2;
-      const y = e.clientY - trailer.offsetHeight / 2;
+        const x = e.clientX - trailer.offsetWidth / 2;
+        const y = e.clientY - trailer.offsetHeight / 2;
 
-      const keyframes = {
-        transform: `translate(${x}px, ${y}px)`,
-      };
+        const keyframes = {
+            transform: `translate(${x}px, ${y}px)`,
+        };
 
-      trailer.animate(keyframes, {
-        duration: 0,
-        fill: "forwards",
-      });
+        trailer.animate(keyframes, {
+            duration: 0,
+            fill: "forwards",
+        });
     };
-  </script>
+</script>
+
 </html>
