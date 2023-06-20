@@ -64,6 +64,10 @@
         color: var(--color-primary);
     }
     
+    h2 {
+        font-size: 28px !important;
+    }
+    
     #trailer {
         height: 28px;
         width: 28px;
@@ -151,7 +155,7 @@
     }
     
     .left-area p,
-    q {
+    .left-area q {
         font-size: 20px;
         color: var(--color-dark-1);
     }
@@ -168,6 +172,65 @@
         padding: 4rem 2rem 2rem 2rem;
         transform: translateY(-65px);
         transition: 0.3s ease-in-out;
+    }
+    
+    .middle-area {
+        display: flex;
+        width: 100%;
+    }
+    
+    .mid-left {
+        display: flex;
+        text-align: center;
+        width: 50%;
+        padding: 5em;
+        margin: auto auto 4em auto;
+        border: 2px solid var(--color-primary);
+        border-radius: 25px 250px 250px 25px;
+        box-shadow: -70px 30px 40px var(--color-dark-1) !important;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .mid-left:hover {
+        transform: translateX(30px);
+        box-shadow: -120px 30px 50px var(--color-dark-1) !important;
+    }
+    
+    .mid-left h2 {
+        writing-mode: vertical-lr;
+        text-align: end;
+        padding-right: 1em;
+    }
+    
+    .edu-institutes {
+        padding-left: 1.5em;
+        text-align: right;
+    }
+    
+    .mid-right {
+        width: 30%;
+        padding: 0 !important;
+    }
+    
+    .mid-right h2 {
+        margin-top: 3em;
+        text-align: center;
+    }
+    
+    .mid-right .soft-skills {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .hor-line {
+        display: flex;
+        width: 25px;
+        padding: 0.1em;
+        border: none;
+        background-color: var(--color-primary);
+        margin: 0 auto 1.2em auto;
     }
     /* infinite scroll text */
     
@@ -256,48 +319,7 @@
         animation-duration: 1s;
         animation-delay: 1.5s;
     }
-    
-    .middle-area h2 {
-        width: 80%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        font-size: 28px;
-    }
-    
-    .middle-area {
-        margin: 2em auto 5em auto;
-        display: flex;
-    }
-    
-    .mid-left {
-        width: 30%;
-        margin: auto;
-        padding: 2.2em;
-        text-align: center;
-    }
-    
-    .mid-right {
-        width: 40%;
-        margin: auto;
-        padding: 2.5em 5em;
-        text-align: center;
-        border-top: 2px solid var(--color-primary);
-        border-bottom: 2px solid var(--color-primary);
-        border-radius: 200px 0 200px 0;
-    }
-    
-    .mid-right ul li {
-        font-size: 20px;
-    }
-    
-    .institute-name {
-        font-size: 24px;
-    }
-    
-    .institute-course {
-        font-size: 18px;
-    }
+    /*  */
     
     .bottom-area {
         text-align: center;
@@ -360,6 +382,34 @@
         }
         .right-area {
             margin: 100px auto;
+            margin-bottom: 0 !important;
+        }
+        .mid-left {
+            width: 50%;
+            border: none;
+            display: block;
+            border-radius: 0;
+            box-shadow: none !important;
+        }
+        .mid-left:hover {
+            box-shadow: none !important;
+            transform: none !important;
+        }
+        .mid-left h2 {
+            writing-mode: horizontal-tb;
+            text-align: center;
+        }
+        .edu-institutes {
+            text-align: center;
+        }
+        .mid-right {
+            width: 50%;
+            text-align: center;
+            margin-top: 0 !important;
+            margin: auto;
+            margin-bottom: 5em;
+            border-left: 1px double var(--color-primary);
+            border-radius: 0;
         }
     }
     
@@ -373,20 +423,35 @@
             margin: 100px auto;
         }
         .middle-area {
-            margin-top: -5em;
             display: block;
+        }
+        .mid-left,
+        .mid-right {
+            border: none;
+            padding: 0;
         }
         .mid-left {
             width: 100%;
-            margin: auto;
-            margin-top: -7em;
-            margin-bottom: 3em;
         }
         .mid-right {
-            width: 60%;
-            margin: auto;
-            margin-bottom: 3em;
-            margin-top: 5em;
+            width: 80%;
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            border-radius: 25px 250px 250px 250px;
+            transition: 0.3s ease-in-out;
+        }
+        .mid-right h2 {
+            margin: 0;
+        }
+        .mid-right {
+            padding: 2.5em !important;
+        }
+        .soft-skills ul li {
+            color: var(--color-secondary) !important;
+        }
+        .hor-line {
+            display: block;
+            background-color: var(--color-secondary);
         }
     }
     
@@ -404,8 +469,18 @@
             padding: 2.5em 1.2em !important;
         }
         .mid-right {
-            width: 85%;
-            margin: auto;
+            width: 100%;
+            border-radius: 0;
+            margin-bottom: 2em;
+            background-color: transparent;
+            color: var(--color-primary);
+        }
+        .soft-skills ul li {
+            color: var(--color-primary) !important;
+        }
+        .hor-line {
+            display: block;
+            background-color: var(--color-primary);
         }
     }
     
@@ -415,14 +490,6 @@
             width: 100%;
             margin: 100px auto;
             padding: 2.5em 0 1.5em 0 !important;
-        }
-        .middle-area {
-            margin: -5em 0 5em 0;
-        }
-        .mid-right {
-            width: 100%;
-            padding: 2.5em 0 !important;
-            margin: auto;
         }
     }
 </style>
@@ -518,35 +585,47 @@
             <div class="middle-area">
                 <div class="mid-left">
                     <h2>Education Qualifications</h2>
-                    <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto; " class="hor-line " />
-                    <div style="margin: 1.5em 0;">
-                        <span style="text-transform: uppercase; " class="institute-name">
-                            [Bachelors] Islington College
-                        </span>
-                        <h4 class="institute-course ">
-                            BSc (HONS.) IT, COMPUTING
-                            <span> [2019 - 2022] </span>
-                        </h4>
-                        <span style="font-size: 18px " class="institute-location"> Kamal Pokhari, Kathmandu </span>
-                    </div>
 
-                    <div>
-                        <span style="text-transform: uppercase " class="institute-name">
-                        [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
-                    </span>
-                        <h4 class="institute-course ">
-                            +2 Science
-                            <span> [2017 – 2019] </span>
-                        </h4>
-                        <span style="font-size: 18px " class="institute-location"> Dillibazar, Kathmandu </span>
+                    <hr style="
+                        display: flex;
+                        width: 2em;
+                        padding: 0.1em;
+                        border: none;
+                        background-color: var(--color-primary);
+                        margin: 0 auto 1.2em auto;
+                      " class="hor-line" />
+
+                    <div class="edu-institutes">
+                        <div class="bachelors-college">
+                            <span style="text-transform: uppercase; font-size: 28px;">
+                              [Bachelors] Islington College
+                            </span>
+                            <h4 style="font-size: 20px;">
+                                BSc (HONS.) IT, COMPUTING
+                                <span> [2019 - 2022] </span>
+                            </h4>
+                            <span style="font-size: 18px"> Kamal Pokhari, Kathmandu </span>
+                        </div>
+                        <br>
+                        <div class="plustwo-college">
+                            <span style="text-transform: uppercase; font-size: 28px;">
+                              [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
+                            </span>
+                            <h4 style="font-size: 20px;">
+                                +2 Science
+                                <span> [2017 – 2019] </span>
+                            </h4>
+                            <span style="font-size: 18px"> Dillibazar, Kathmandu </span>
+                        </div>
                     </div>
                 </div>
+
                 <div class="mid-right">
                     <h2>Soft Skills</h2>
 
-                    <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto;" class="hor-line" />
+                    <hr class="hor-line" />
 
-                    <div class="about-skills " style="display: flex; justify-content: center; text-align: center">
+                    <div class="soft-skills">
                         <ul style="text-transform: uppercase">
                             <li>MOTIVATED and ENTHUSIASTIC</li>
                             <li>PROBLEM SOLVING</li>
@@ -560,10 +639,11 @@
                     </div>
                 </div>
             </div>
+            </div>
 
             <div class="bottom-area" style="padding: 2.5em 5em">
-                <h2 style="font-size: 24px; ">Experiences</h2>
-                <div class="about-experiences ">
+                <h2 style="font-size: 24px;">Work Experiences</h2>
+                <div class="about-experiences">
                     <h3>SB Solutions PVT. LTD. [FRONT-END ANGULAR DEVELOPER]</h3>
                     <span> [JULY 2021 – NOVEMBER 2021] </span>
                     <span> Dillibazar, Kathmandu </span>
@@ -578,11 +658,11 @@
 
         </section>
         <footer>
-            <div class="footer-content ">
-                <span class="footer-c ">©All rights reserved</span>
-                <span class="footer-name " style="text-decoration: underline; text-underline-offset: 4px ">Nischal Pradhan</span
+            <div class="footer-content">
+                <span class="footer-c">©All rights reserved</span>
+                <span class="footer-name" style="text-decoration: underline; text-underline-offset: 4px">Nischal Pradhan</span
               >
-              <span class="footer-aim ">Software Developer</span>
+              <span class="footer-aim">Software Developer</span>
             </div>
         </footer>
     </main>
