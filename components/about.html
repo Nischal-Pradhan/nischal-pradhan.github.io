@@ -270,20 +270,25 @@
         display: flex;
     }
     
-    .middle-area ul li {
-        font-size: 20px;
-    }
-    
     .mid-left {
-        width: 50%;
-        border-right: 1px solid var(--color-dark-1);
+        width: 30%;
+        margin: auto;
+        padding: 2.2em;
         text-align: center;
     }
     
     .mid-right {
-        width: 50%;
-        border-left: 1px solid var(--color-dark-1);
+        width: 40%;
+        margin: auto;
+        padding: 2.5em 5em;
         text-align: center;
+        border-top: 2px solid var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+        border-radius: 200px 0 200px 0;
+    }
+    
+    .mid-right ul li {
+        font-size: 20px;
     }
     
     .institute-name {
@@ -371,20 +376,23 @@
             margin-top: -5em;
             display: block;
         }
-        .mid-left,
-        .mid-right {
+        .mid-left {
             width: 100%;
             margin: auto;
-            border: none;
+            margin-top: -7em;
+            margin-bottom: 3em;
         }
         .mid-right {
+            width: 60%;
+            margin: auto;
+            margin-bottom: 3em;
             margin-top: 5em;
         }
     }
     
     @media screen and (max-width:845px) {
         .top-area>.left-area {
-            width: 100%;
+            width: 98%;
             margin: 0;
             padding: 1.2em;
         }
@@ -394,6 +402,10 @@
         }
         .bottom-area {
             padding: 2.5em 1.2em !important;
+        }
+        .mid-right {
+            width: 85%;
+            margin: auto;
         }
     }
     
@@ -497,39 +509,40 @@
                     </section>
                 </div>
             </div>
+
             <div class="middle-area">
                 <div class="mid-left">
                     <h2>Education Qualifications</h2>
                     <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto; " class="hor-line " />
-                    <div style="margin: 1.5em 0; ">
-                        <span style="text-transform: uppercase; " class="institute-name ">
+                    <div style="margin: 1.5em 0;">
+                        <span style="text-transform: uppercase; " class="institute-name">
                             [Bachelors] Islington College
                         </span>
                         <h4 class="institute-course ">
                             BSc (HONS.) IT, COMPUTING
                             <span> [2019 - 2022] </span>
                         </h4>
-                        <span style="font-size: 18px " class="institute-location "> Kamal Pokhari, Kathmandu </span>
+                        <span style="font-size: 18px " class="institute-location"> Kamal Pokhari, Kathmandu </span>
                     </div>
 
                     <div>
-                        <span style="text-transform: uppercase " class="institute-name ">
+                        <span style="text-transform: uppercase " class="institute-name">
                         [HIGH SCHOOL] TRINITY INTERNATIONAL COLLEGE
                     </span>
                         <h4 class="institute-course ">
                             +2 Science
                             <span> [2017 – 2019] </span>
                         </h4>
-                        <span style="font-size: 18px " class="institute-location "> Dillibazar, Kathmandu </span>
+                        <span style="font-size: 18px " class="institute-location"> Dillibazar, Kathmandu </span>
                     </div>
                 </div>
                 <div class="mid-right">
                     <h2>Soft Skills</h2>
 
-                    <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto; " class="hor-line " />
+                    <hr style=" display: flex; width: 45px; padding: 0.1em; border: none; background-color: var(--color-primary); margin: 0 auto 1.2em auto;" class="hor-line" />
 
-                    <div class="about-skills " style="display: flex; justify-content: center; text-align: center ">
-                        <ul style="text-transform: uppercase ">
+                    <div class="about-skills " style="display: flex; justify-content: center; text-align: center">
+                        <ul style="text-transform: uppercase">
                             <li>MOTIVATED and ENTHUSIASTIC</li>
                             <li>PROBLEM SOLVING</li>
                             <li>CRITICAL THINKING</li>
@@ -542,7 +555,7 @@
                     </div>
                 </div>
             </div>
-            <br />
+
             <div class="bottom-area" style="padding: 2.5em 5em">
                 <h2 style="font-size: 24px; ">Experiences</h2>
                 <div class="about-experiences ">
