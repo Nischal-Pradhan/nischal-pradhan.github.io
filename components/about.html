@@ -201,11 +201,29 @@
     .mid-left h2 {
         writing-mode: vertical-lr;
         text-align: end;
-        padding-right: 1em;
+    }
+    
+    .mid-left-head-1 {
+        display: none;
+    }
+    
+    .mid-left-head-2 {
+        padding-left: 2em;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }
+    
+    .mid-left-horLine {
+        display: none;
+        width: 2em;
+        padding: 0.1em;
+        border: none;
+        background-color: var(--color-primary);
+        margin: 0 auto 1.2em auto;
     }
     
     .edu-institutes {
-        padding-left: 1.5em;
+        padding-right: 1.5em;
         text-align: right;
     }
     
@@ -390,6 +408,20 @@
             display: block;
             border-radius: 0;
             box-shadow: none !important;
+        }
+        .mid-left-head-1 {
+            display: block;
+        }
+        .mid-left-head-2 {
+            display: none;
+        }
+        .mid-left-horLine {
+            display: flex;
+            width: 2em;
+            padding: 0.1em;
+            border: none;
+            background-color: var(--color-primary);
+            margin: 0 auto 1.2em auto;
         }
         .mid-left:hover {
             box-shadow: none !important;
@@ -584,16 +616,9 @@
 
             <div class="middle-area">
                 <div class="mid-left">
-                    <h2>Education Qualifications</h2>
+                    <h2 class="mid-left-head-1">Education Qualifications</h2>
 
-                    <hr style="
-                        display: flex;
-                        width: 2em;
-                        padding: 0.1em;
-                        border: none;
-                        background-color: var(--color-primary);
-                        margin: 0 auto 1.2em auto;
-                      " class="hor-line" />
+                    <hr class="mid-left-horLine" />
 
                     <div class="edu-institutes">
                         <div class="bachelors-college">
@@ -618,6 +643,8 @@
                             <span style="font-size: 18px"> Dillibazar, Kathmandu </span>
                         </div>
                     </div>
+
+                    <h2 class="mid-left-head-2">Education Qualifications</h2>
                 </div>
 
                 <div class="mid-right">
