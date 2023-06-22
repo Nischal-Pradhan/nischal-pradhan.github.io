@@ -205,7 +205,7 @@ body {
     clip-path: circle();
     height: 300px;
     transform: translate(0%, 10%);
-    filter: drop-shadow(-38px 20px 5px var(--color-dark-1));
+    filter: drop-shadow(-52px 15px 7px var(--color-dark-1));
     transition: 500ms ease;
     user-select: none;
 }
