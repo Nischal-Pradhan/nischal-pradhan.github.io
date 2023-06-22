@@ -26,7 +26,7 @@
     
      :root {
         --color-primary: #151515;
-        --color-secondary: #f1f1f1;
+        --color-secondary: #f9f6ef;
         --color-dark: #111111;
         --color-dark-1: #4b4b4b;
     }
@@ -146,6 +146,8 @@
         text-align: justify;
         font-size: 20px;
         padding: 2rem 5rem;
+        padding-bottom: 0 !important;
+        transform: translateY(-15px);
     }
     
     .left-area h2 {
@@ -186,16 +188,35 @@
         padding: 5em;
         margin: auto auto 4em auto;
         border: 2px solid var(--color-primary);
-        border-radius: 25px 250px 250px 25px;
-        box-shadow: -70px 30px 40px var(--color-dark-1) !important;
+        border-radius: 10px;
+        box-shadow: 70px 30px 40px var(--color-dark-1) !important;
         justify-content: center;
         align-items: center;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-out;
     }
     
     .mid-left:hover {
         transform: translateX(30px);
         box-shadow: -120px 30px 50px var(--color-dark-1) !important;
+        transition: 0.5s ease-in;
+    }
+    
+    .bachelors-college,
+    .plustwo-college {
+        padding: 1.5em;
+        color: var(--color-secondary);
+        text-align: start;
+        border-radius: 5px;
+    }
+    
+    .bachelors-college {
+        background: url('./../img/islington.jpg') no-repeat center center / cover;
+        backdrop-filter: blur(50px);
+    }
+    
+    .plustwo-college {
+        background: url('./../img/trinity.jpg') no-repeat center center / cover;
+        backdrop-filter: blur(50%);
     }
     
     .mid-left h2 {
@@ -222,11 +243,6 @@
         margin: 0 auto 1.2em auto;
     }
     
-    .edu-institutes {
-        padding-right: 1.5em;
-        text-align: right;
-    }
-    
     .mid-right {
         width: 30%;
         padding: 0 !important;
@@ -249,6 +265,31 @@
         border: none;
         background-color: var(--color-primary);
         margin: 0 auto 1.2em auto;
+    }
+    
+    .btn-download button {
+        border: none;
+        border-radius: 15px;
+        margin: 2.5em auto;
+        margin-bottom: 0 !important;
+        padding: 1em;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+        border-bottom: 2px solid transparent;
+        transition: 0.2s ease-out;
+    }
+    
+    .btn-download button,
+    .btn-download i {
+        font-size: 18px !important;
+    }
+    
+    .btn-download button:hover {
+        background-color: transparent;
+        color: var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+        border-radius: 0;
     }
     /* infinite scroll text */
     
@@ -386,7 +427,7 @@
         font-weight: 600;
     }
     
-    @media screen and (max-width:1700px) {
+    @media screen and (max-width:1900px) {
         .top-area {
             display: block;
         }
@@ -402,6 +443,14 @@
             margin: 100px auto;
             margin-bottom: 0 !important;
         }
+        .btn-download {
+            max-width: 200px;
+            padding: 0 !important;
+            margin: auto !important;
+        }
+    }
+    
+    @media screen and (max-width:1700px) {
         .mid-left {
             width: 50%;
             border: none;
@@ -443,6 +492,9 @@
             border-left: 1px double var(--color-primary);
             border-radius: 0;
         }
+        .mid-right .soft-skills {
+            line-height: 40px;
+        }
     }
     
     @media screen and (max-width:1300px) {
@@ -481,10 +533,14 @@
         .soft-skills ul li {
             color: var(--color-secondary) !important;
         }
-        .hor-line {
-            display: block;
-            background-color: var(--color-secondary);
+        .mid-right .soft-skills {
+            line-height: 30px;
         }
+    }
+    
+    .hor-line {
+        display: block;
+        background-color: var(--color-secondary);
     }
     
     @media screen and (max-width:845px) {
@@ -553,6 +609,12 @@
                     build confidence. Whatever your capabilities, you must stretch
                     them to the limit and a little beyond. Have a bright vision and be
                     the best version of yourself.</q>
+                    <div class="btn-download">
+                        <a href="./../docs/CV-Nischal-Pradhan.pdf" target="_blank">
+                            <button class="download-btn">Download CV&nbsp;
+                            <i class="fa fa-file-pdf-o" style="font-size:24px"></i></button>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="right-area">
@@ -621,6 +683,7 @@
                     <hr class="mid-left-horLine" />
 
                     <div class="edu-institutes">
+
                         <div class="bachelors-college">
                             <span style="text-transform: uppercase; font-size: 28px;">
                               [Bachelors] Islington College
