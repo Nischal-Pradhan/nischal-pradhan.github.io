@@ -357,7 +357,7 @@
 
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" style=" resize: none;"></textarea>
                     <br>
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="submit-btn" id="submitButton">
                         <i class="fa fa-send-o"></i> Submit
                     </button>
                 </form>
@@ -472,6 +472,15 @@
             fill: "forwards"
         })
     }
+</script>
+<script>
+    const fullName = document.getElementById("fullname");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+    const submitButton = document.getElementById("submitButton");
 </script>
 
 </html>
