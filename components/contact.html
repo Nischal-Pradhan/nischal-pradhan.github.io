@@ -346,7 +346,7 @@
                 <h2>
                     Get in <span style="color:#7c7c7c;">&nbsp;Touch</span>
                 </h2>
-                <form action="" class="contact-form">
+                <form action="" class="contact-form" id="contactForm">
                     <input type="text" class="fullname" id="fullname" placeholder="Full Name">
 
                     <input type="email" class="email" id="email" placeholder="Email">
@@ -472,15 +472,21 @@
             fill: "forwards"
         })
     }
-</script>
-<script>
-    const fullName = document.getElementById("fullname");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const subject = document.getElementById("subject");
-    const message = document.getElementById("message");
 
-    const submitButton = document.getElementById("submitButton");
+    // form data :json
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form); // creates a new formData object
+
+        const data = Object.fromEntries(formData.entries()) // converts FormData into plain object
+
+        const jsonData = JSON.stringify(data) // converts object to JSON string
+
+        console.log(jsonData);
+    })
 </script>
 
 </html>
