@@ -325,7 +325,7 @@
     
     #outputSpan {
         font-size: 20px;
-        max-width: 30em;
+        max-width: 80em;
         max-height: 30em;
         margin: auto;
         text-transform: uppercase;
@@ -377,10 +377,6 @@
                         <i class="fa fa-send-o"></i> Submit
                     </button>
                 </form>
-
-                <div id="outputSpan">
-                    <span id="o-span"></span>
-                </div>
             </div>
 
             <hr class="v-seperation">
@@ -464,14 +460,15 @@
                         <span class="footer-aim">Software Developer</span>
                     </div>
                 </footer>
-
-                <!--  -->
-
             </div>
         </section>
 
     </main>
 
+    <div id="outputSpan">
+        <span id="o-span"></span>
+    </div>
+    <br>
 
 </body>
 
@@ -510,17 +507,17 @@
 
 
         const O_String = `
-                          <strong>Name:</strong> ${fullName}<br>
-                          <strong>Email:</strong> ${email}<br>
-                          <strong>Phone:</strong> ${phone}<br>
-                          <strong>Subject:</strong> ${subject}<br>
-                          <strong>Message:</strong> ${message}
+                          <strong>*Name:</strong> ${fullName}<br>
+                          <strong>*Email:</strong> ${email}<br>
+                          <strong>*Phone:</strong> ${phone}<br>
+                          <strong>*Subject:</strong> ${subject}<br>
+                          <strong>*Message:</strong><br> ${message}
                          `;
 
-        const tyMsg = "Thank You for Contacting!! <br> will get to you soon... Stay Tuned&#9786;"
-        const errorMsg = "***If you do not get any reply within 48 hours. <br>Email me: <b>pradhan.nischal.613@gmail.com</b>***."
+        const tyMsg = "Thank You for Contacting!! will get to you soon...<br>Stay Tuned&#9786;"
+        const errorMsg = "***If you do not get any reply within 48 hours. Email me: <b>pradhan.nischal.613@gmail.com</b>***."
 
-        O_Span.innerHTML = O_String + "<br><br>" + tyMsg + "<br>" + errorMsg;
+        O_Span.innerHTML = O_String + "<br><br>" + tyMsg + "<br><br>" + errorMsg;
 
         console.log(O_String);
 
