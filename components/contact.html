@@ -469,6 +469,7 @@
         <span id="o-span"></span>
     </div>
     <br>
+    <br>
 
 </body>
 
@@ -514,10 +515,10 @@
                           <strong>*Message:</strong><br> ${message}
                          `;
 
-        const tyMsg = "Thank You for Contacting!! will get to you soon...<br>Stay Tuned&#9786;"
+        const tyMsg = "Form has been submitted!! will get to you soon...<br>Thank you & Stay Tuned&#9786;"
         const errorMsg = "***If you do not get any reply within 48 hours. Email me: <b>pradhan.nischal.613@gmail.com</b>***."
 
-        O_Span.innerHTML = O_String + "<br><br>" + tyMsg + "<br><br>" + errorMsg;
+        O_Span.innerHTML = tyMsg + "<br><br>" + O_String + "<br><br><hr>" + errorMsg;
 
         form.reset();
     })
