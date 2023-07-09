@@ -322,6 +322,22 @@
             padding: 1.5em 0;
         }
     }
+    
+    #outputSpan {
+        font-size: 20px;
+        max-width: 30em;
+        max-height: 30em;
+        margin: auto;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.07em;
+        z-index: 9999;
+        user-select: none;
+    }
+    
+    #o-span {
+        line-height: 0.2em;
+    }
 </style>
 
 <body>
@@ -347,20 +363,24 @@
                     Get in <span style="color:#7c7c7c;">&nbsp;Touch</span>
                 </h2>
                 <form action="" class="contact-form" id="contactForm">
-                    <input type="text" class="fullname" id="fullname" placeholder="Full Name">
+                    <input type="text" class="fullname" id="name" placeholder="Full Name" required>
 
-                    <input type="email" class="email" id="email" placeholder="Email">
+                    <input type="email" class="email" id="email" placeholder="Email" required>
 
-                    <input type="tel" class="phone" id="phone" placeholder="Contact Number">
+                    <input type="tel" class="phone" id="phone" placeholder="Contact Number" required>
 
-                    <input type="text" class="subject" id="subject" placeholder="Subject">
+                    <input type="text" class="subject" id="subject" placeholder="Subject" required>
 
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" style=" resize: none;"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" style=" resize: none;" required></textarea>
                     <br>
                     <button type="submit" class="submit-btn" id="submitButton">
                         <i class="fa fa-send-o"></i> Submit
                     </button>
                 </form>
+
+                <div id="outputSpan">
+                    <span id="o-span"></span>
+                </div>
             </div>
 
             <hr class="v-seperation">
@@ -473,19 +493,38 @@
         })
     }
 
-    // form data :json
-    const form = document.getElementById("contactForm");
+    // form data
 
-    form.addEventListener('submit', (event) => {
+    const form = document.getElementById("contactForm");
+    const O_Span = document.getElementById("o-span");
+
+    form.addEventListener('submit', function(event) {
+
         event.preventDefault();
 
-        const formData = new FormData(form); // creates a new formData object
+        const fullName = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
 
-        const data = Object.fromEntries(formData.entries()) // converts FormData into plain object
 
-        const jsonData = JSON.stringify(data) // converts object to JSON string
+        const O_String = `
+                          <strong>Name:</strong> ${fullName},<br>
+                          <strong>Email:</strong> ${email},<br>
+                          <strong>Phone:</strong> ${phone},<br>
+                          <strong>Subject:</strong> ${subject},<br>
+                          <strong>Message:</strong> ${message}.
+                         `;
 
-        console.log(jsonData);
+        const tyMsg = "Thank You for Contacting!! <br> will get to you soon... Stay Tuned&#9786;"
+        const errorMsg = "***If you do not get any reply within 48 hours. <br>Email me: <b>pradhan.nischal.613@gmail.com</b>***."
+
+        O_Span.innerHTML = O_String + "<br><br>" + tyMsg + "<br>" + errorMsg;
+
+        console.log(O_String);
+
+        form.reset();
     })
 </script>
 
