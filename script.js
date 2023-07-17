@@ -74,13 +74,3 @@ function goToTop() {
 //     }
 // }
 
-
-window.addEventListener('load', function() {
-    var loader = document.getElementById('loader');
-    var image = document.getElementById('image');
-    
-    setTimeout(function() {
-      loader.classList.add('fade-out');
-      image.style.display = 'block';
-    }, 1500);
-  });
