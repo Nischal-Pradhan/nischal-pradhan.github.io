@@ -73,4 +73,3 @@ function goToTop() {
 //         moreProjectBtn.style.display = "none";
 //     }
 // }
-
