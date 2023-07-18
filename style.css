@@ -205,6 +205,18 @@ body {
   filter: drop-shadow(-55px 15px 10px var(--color-dark-1));
   transition: 500ms ease;
   user-select: none;
+  animation: imageLoad 1200ms;
+}
+
+@keyframes imageLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(auto);
+  }
 }
 
 .imgIcon:hover {
