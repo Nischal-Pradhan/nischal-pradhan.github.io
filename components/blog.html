@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog</title>
+
+        <link rel="icon" href="./../img/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+    /* font-family: 'Poppins', sans-serif; */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        cursor: none !important;
+    }
+    
+     :root {
+        --color-primary: #151515;
+        --color-secondary: #fff;
+        --color-dark: #111111;
+        --color-dark-1: #4b4b4b;
+    }
+    
+     ::selection {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        text-shadow: 0 0 15px var(--color-secondary);
+    }
+    
+     ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background-color: var(--color-secondary);
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary);
+        border-radius: 2px;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-dark);
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--color-primary);
+    }
+    
+    li {
+        list-style: none;
+        color: var(--color-primary);
+    }
+    
+    h2 {
+        font-size: 28px !important;
+    }
+    
+    #trailer {
+        height: 28px;
+        width: 28px;
+        background-color: transparent;
+        border: 2px solid var(--color-secondary);
+        border-radius: 20px 20px 20px 20px;
+        padding: 1.1rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 500ms ease;
+        box-shadow: 2px 5px 20px var(--color-primary);
+        -webkit-border-radius: 20px 20px 20px 20px;
+        -moz-border-radius: 20px 20px 20px 20px;
+        -ms-border-radius: 20px 20px 20px 20px;
+        -o-border-radius: 20px 20px 20px 20px;
+    }
+    
+    body:hover>#trailer {
+        opacity: 1;
+    }
+    
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--color-secondary);
+        /* prevent x-axis scroll */
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        animation: fadeInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+    .head-nav {
+        display: flex;
+        align-items: center;
+        text-align: right;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        padding: 0.4em 2em;
+        background-color: var(--color-secondary);
+    }
+    
+    .head-nav i {
+        font-size: 42px;
+        text-transform: uppercase;
+    }
+    
+    .head-nav i:hover {
+        color: var(--color-dark-1);
+    }
+
+    /* blog section */
+
+.blog-section {
+    position: relative;
+    padding: 5em;
+  }
+  
+  .blog-section > h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 42px;
+    margin: 2rem;
+  }
+  
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .blogs .blog {
+    position: relative;
+    background-color: var(--color-grey-5);
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .blogs .blog:hover {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .blogs .blog:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+  }
+  
+  .blogs .blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    filter: grayscale(100%);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .blogs .blog .blog-text {
+    margin-top: -7px;
+    padding: 1.1rem;
+    border-top: 8px solid var(--color-secondary);
+  }
+  
+  .blogs .blog .blog-text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .blogs .blog .blog-text h4:hover {
+    color: var(--color-secondary);
+  }
+  
+  .blogs .blog .blog-text p {
+    color: var(--color-grey-2);
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+  }
+  
+  @media screen and (max-width: 1250px) {
+    .blogs {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 6rem 3rem;
+      padding: 0;
+    }
+    .blog-section {
+      margin: auto;
+      padding: 0;
+    }
+    .portfolios {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .header-content .right-header {
+      padding-right: 9rem;
+    }
+  }
+  
+  @media screen and (max-width: 660px) {
+    .blogs {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .portfolios {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+     /* footer */
+    
+     .footer-content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 0.5em 2em 1em 2em;
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        border-top: 1px solid var(--color-secondary);
+    }
+    
+    .footer-content>span {
+        margin: 0 0.2em;
+    }
+    
+    .footer-content>span:nth-child(2) {
+        font-weight: 600;
+    }
+</style>
+    <body>
+        <!-- cursor trailer -->
+        <div id="trailer"></div>
+        <!--  -->
+
+        <header class="head-nav">
+            <h1>
+                #My<span style="color:#4b4b4b">Portfolio</span>
+            </h1>
+            <a href="/" aria-label="Go TO Home?">
+                <i class="fa fa-home"></i>
+            </a>
+        </header>
+
+        <main>
+            <section id="blog" class="blog-section fade-scroll-item">
+                <h1>
+                    B<span style="color:#4b4b4b">log</span>
+                </h1>
+
+                <div class="blogs">
+                    <div class="blog">
+                        <img src="../img/h1.gif" alt>
+                        <div class="blog-text">
+                            <h4>
+                                Get started with Web Designing and Web
+                                Development
+                            </h4>
+                            <hr>
+                            <p>
+                                To Create your first Web Site, You need to learn
+                                the Basic of HTML, CSS and JavaScript. Before
+                                starting a project ones should have an idea of
+                                what the project is going to look like and idea
+                                behind the project should be mesmerized. <br> To
+                                become expert in Web Design, you need to
+                                practice Web Designing Tools each and every day.
+                                If not 10-12 hours, but for at least for 2 hours
+                                each day. And increase the time of learning
+                                slowly with time.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="../img/h2.gif" alt>
+                        <div class="blog-text">
+                            <h4>
+                                Learn Developing/Designing Tools and
+                                Technologies
+                            </h4>
+                            <hr>
+                            <p>
+                                There are lots of tools and technologies
+                                available for learning and mastering programming
+                                skills. These tools get updated and modified
+                                over the year with new features and bug free
+                                softwares. For designing the wireframes or
+                                prototypes, there are few I
+                                would like to recommend like Adobe XD, Figma,
+                                Basamiq. I have used these tools in the past
+                                projects that I have done and is still using
+                                some of them to make better wireframes and
+                                prototypes for the projects. Programmers should
+                                learn IDEs/text-editors, programming languages
+                                and other tools like frameworks, designing and
+                                developing a program. Learn Figma, Adobe XD for
+                                creating the wireframes and prototypes for the
+                                project before implementing Designing
+                                and developing Web Applications.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog hide-sm">
+                        <img src="../img/h3.gif" alt>
+                        <div class="blog-text">
+                            <h4>
+                                Learn Web Development Frameworks
+                            </h4>
+                            <hr>
+                            <p>
+                                Simply, a Framework is a tool, that provides
+                                ready-made components or solutions that are
+                                customized in order to speed up development.
+                                Frameworks amy as well include libraries or
+                                packages build within. Some of the frameworks
+                                that I have worked with are
+                                <br> "Django" Python Framework<br> "Flask"
+                                Python Framework<br> "React" JavaScript
+                                Framework<br> "Angular" TypeScript Framework<br>
+                                "SpringBoot" Java Framework . . .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="../img/h4.gif" alt>
+                        <div class="blog-text">
+                            <h4>
+                                Finding Errors/Bugs and Solving Errors and
+                                Debugging
+                            </h4>
+                            <hr>
+                            <p>
+                                There will arise many bugs while programming,
+                                you need to have courage to solve them. Inspect
+                                Web browser for any bug that may arise while
+                                learning website designing. Try to solve by
+                                looking up for the errors in the console of any
+                                web browsers. You will
+                                eventually get to know bugs and to solve them.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="../img/h5.gif" alt>
+                        <div class="blog-text">
+                            <h4>
+                                Researching || Problem Solving || Information
+                                Using
+                            </h4>
+                            <hr>
+                            <p>
+                                Research is the most important skill to learn.
+                                Everything everywhere requires researching
+                                skills. If one have good researching skills,
+                                they can find errors and solve them quick
+                                enough. Surf the internet, build the researching
+                                skills and get new ideas
+                                and implementing information in your project.
+                                Internet has all if not most of (99.98%) of the
+                                things you want to know. By the perfect keywords
+                                typed and ideas, any answers can be found
+                                online. There are many creative individuals
+                                who could provide many different ideas and can
+                                help you make your problems/errors in your
+                                projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="../img/h6.gif" alt>
+                        <div class="blog-text">
+                            <h4>
+                                Mastering different Programming Languages
+                            </h4>
+                            <hr>
+                            <p>
+                                Learning various languages could be difficult.
+                                But once you learn one programming language like
+                                C or Python, the ideas you get of programming
+                                could be implemented for all if not most
+                                programming languages. Some syntax might be
+                                different but the technique
+                                and ideas would be the same. So while learning
+                                to code, focus on how the program is working,
+                                what 'this' function or class is doing, why this
+                                code is running and the other is not running.
+                                Learn to communicate with other, ask questions,
+                                clear confusions, solve problems and anybody can
+                                improve the skill of programming. Learn
+                                front-end programming and back-end programming.
+                                Learn what language can be used in front and
+                                back -end of the program.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <div class="footer-content">
+                        <span class="footer-c">©All rights reserved</span>
+                        <span class="footer-name"
+                            style="text-decoration: underline; text-underline-offset: 4px">Nischal
+                            Pradhan</span>
+                        <span class="footer-aim">Software Developer</span>
+                    </div>
+                </footer>
+
+            </main>
+        </body>
+        <script>
+        //cursor trailer animation
+        const trailer = document.getElementById("trailer");
+    
+        window.onmousemove = (e) => {
+            const x = e.clientX - trailer.offsetWidth / 2;
+            const y = e.clientY - trailer.offsetHeight / 2;
+    
+            const keyframes = {
+                transform: `translate(${x}px, ${y}px)`,
+            };
+    
+            trailer.animate(keyframes, {
+                duration: 0,
+                fill: "forwards",
+            });
+        };
+    </script>
+    </html>

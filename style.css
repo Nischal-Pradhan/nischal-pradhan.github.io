@@ -1013,11 +1013,14 @@ body {
   padding-bottom: 1rem;
   font-size: 20px;
 }
+.btn-sm {
+  display: none;
+}
 
 @media screen and (max-width: 1250px) {
   .blogs {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 6rem;
+    margin: 6rem 3rem;
     padding: 0;
   }
   .blog-section {
@@ -1029,6 +1032,39 @@ body {
   }
   .header-content .right-header {
     padding-right: 9rem;
+  }
+  .blog > .blog-text > p {
+    display: none;
+  }
+  .blog > .blog-text > hr {
+    display: none;
+  }
+  .hide-sm {
+    display: none;
+  }
+
+  .btn-sm {
+    display: block;
+    font-size: 20px;
+    border: none;
+    margin: 2rem auto;
+    padding: 0.7rem 1rem;
+    background: transparent !important;
+    border-bottom: 2px solid var(--color-primary);
+    border-radius: 0;
+    color: var(--color-primary);
+    width: max-content;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+  }
+
+  .btn-sm:hover {
+    border-radius: 10px;
+    width: max-content;
+    background: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
   }
 }
 
