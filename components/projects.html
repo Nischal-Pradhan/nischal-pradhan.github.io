@@ -14,7 +14,7 @@
     </head>
 
     <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
     /* font-family: 'Poppins', sans-serif; */
     
     * {
@@ -24,6 +24,7 @@
         scroll-behavior: smooth;
         cursor: none !important;
         font-family: "Poppins", sans-serif;
+        font-weight: 200 !important;
     }
     
      :root {
@@ -64,6 +65,10 @@
     li {
         list-style: none;
         color: var(--color-primary);
+    }
+    
+    .span-content {
+        font-weight: 400 !important;
     }
     
     #trailer {
@@ -319,7 +324,8 @@
         <!--  -->
 
         <header class="head-nav">
-            <h1>#My<span style="color: #4b4b4b">Portfolio</span></h1>
+            <h1 class="span-content">#My<span class="span-content"
+                    style="color: #4b4b4b">Portfolio</span></h1>
             <a href="/" aria-label="Go TO Home?">
                 <i class="fa fa-home"></i>
             </a>
@@ -328,7 +334,8 @@
         <main>
             <section class="project-page">
                 <div class="more-projects">
-                    <h2>More <span style="color: #4b4b4b">Projects</span></h2>
+                    <h2 class="span-content">More <span class="span-content"
+                            style="color: #4b4b4b">Projects</span></h2>
                     <hr />
 
                     <!-- 01 -->
@@ -343,7 +350,9 @@
                         </div>
 
                         <div class="info">
-                            <h3>Learning ReactJS w/ APOD API</h3>
+                            <h3 class="span-content">Learning ReactJS w/ APOD
+                                API
+                            </h3>
                             <br />
                             <p>
                                 APOD ("Astronomy Picture of the Day") is a
@@ -357,7 +366,7 @@
                             <span>
                                 <a
                                     href="https://github.com/Nischal-Pradhan/Learn-with-APOD-api-main.git"
-                                    target="_blank">
+                                    target="_blank" class="span-content">
                                     <i class="fa fa-external-link"
                                         style="font-size: 17px"></i>&nbsp; Go To
                                     Project
@@ -370,7 +379,9 @@
                     <!-- 02 -->
                     <div class="find-projects">
                         <div class="info">
-                            <h3>Movie Recommendation System (Jupyter)</h3>
+                            <h3 class="span-content">Movie Recommendation System
+                                (Jupyter)
+                            </h3>
                             <br />
                             <p>
                                 This is an AI/ML College Project. In this
@@ -386,7 +397,7 @@
                             <span>
                                 <a
                                     href="https://github.com/Nischal-Pradhan/movie-recommendation-system"
-                                    target="_blank">
+                                    target="_blank" class="span-content">
                                     <i class="fa fa-external-link"
                                         style="font-size: 17px"></i>&nbsp; Go To
                                     Project
@@ -418,7 +429,9 @@
                         </div>
 
                         <div class="info">
-                            <h3>Yatayat(Bus) Management System</h3>
+                            <h3 class="span-content">Yatayat(Bus) Management
+                                System
+                            </h3>
                             <br />
                             <p>
                                 This is a Django Project (Final Year Project)
@@ -433,7 +446,7 @@
                             <span>
                                 <a
                                     href="https://github.com/Nischal-Pradhan/Yatayat-Management-System-fyp"
-                                    target="_blank">
+                                    target="_blank" class="span-content">
                                     <i class="fa fa-external-link"
                                         style="font-size: 17px"></i>&nbsp; Go To
                                     Project
@@ -446,7 +459,8 @@
                     <!-- 02 -->
                     <div class="find-projects">
                         <div class="info">
-                            <h3>Computer Vision (OpenCV)</h3>
+                            <h3 class="span-content">Computer Vision (OpenCV)
+                            </h3>
                             <br />
                             <p>
                                 This is a python application to access Mobile
@@ -479,7 +493,7 @@
               text-decoration: overline;
               justify-content: center;
               margin: auto;
-            ">
+            " class="span-content">
                         UI Designs
                     </span>
 
