@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    cursor: none !important;
+    /* cursor: none !important; */
     font-family: "Poppins", sans-serif;
     font-weight: 200 !important;
 }
@@ -223,10 +223,13 @@ body {
     }
 }
 
-.imgIcon:hover {
-    scale: 1.05;
+.imgIcon img {
+    transition: transform 250ms ease, filter 250ms ease;
+}
+
+.imgIcon img:hover {
+    transform: scale(1.1);
     filter: drop-shadow(-25px 10px 100px var(--color-dark-1));
-    transition: 250ms ease;
 }
 
 .greetings::before {
@@ -266,6 +269,15 @@ body {
     letter-spacing: 0.12em;
     animation: animate 3.5s steps(30, end), blinking-cursor 1s step-end infinite;
 }
+
+.sm-subscript a {
+    transition: 0.3s all ease-in-out;
+}
+.sm-subscript a:hover {
+    font-size: 22px;
+    transition: 0.3s all ease-in-out;
+}
+
 
 @keyframes animate {
     from {
