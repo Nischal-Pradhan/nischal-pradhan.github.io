@@ -225,7 +225,6 @@ body {
 
 .imgIcon img {
     transition: transform 250ms ease, filter 250ms ease;
-    filter: grayscale(25%);
 }
 
 .imgIcon img:hover {
@@ -278,7 +277,6 @@ body {
     font-size: 22px;
     transition: 0.3s all ease-in-out;
 }
-
 
 @keyframes animate {
     from {
@@ -385,7 +383,7 @@ body {
     }
 }
 
-@media screen and (max-height: 648px) {
+@media screen and (max-height: 700px) {
     .imgIcon {
         height: 180px;
     }
