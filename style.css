@@ -225,6 +225,7 @@ body {
 
 .imgIcon img {
     transition: transform 250ms ease, filter 250ms ease;
+    filter: grayscale(25%);
 }
 
 .imgIcon img:hover {
