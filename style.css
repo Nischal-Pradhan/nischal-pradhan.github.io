@@ -244,7 +244,7 @@ body {
 
 @keyframes animate-greeting {
     50% {
-        content: "नमस्कार";
+        content: "こんにちは";
         transform: scale(0.8);
     }
 }
@@ -699,12 +699,14 @@ body {
     transition: 0.5s ease-in-out;
     border: 2px double var(--color-primary);
     user-select: none;
+    filter: grayscale(100%);
 }
 
 .right-flex>img:hover {
     scale: 1.07;
     padding: 0;
     border: 2px double transparent;
+    filter: grayscale(0%);
 }
 
 .learn-btn {
