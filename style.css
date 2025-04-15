@@ -224,12 +224,14 @@ body {
 }
 
 .imgIcon img {
+    filter: grayscale(100%);
     transition: transform 250ms ease, filter 250ms ease;
 }
 
 .imgIcon img:hover {
     transform: scale(1.1);
     filter: drop-shadow(-25px 10px 100px var(--color-dark-1));
+    filter: grayscale(100%);
 }
 
 .greetings::before {
