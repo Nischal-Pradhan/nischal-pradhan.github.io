@@ -158,12 +158,12 @@
             <img src="./img/mem-icce.png" alt="profile-image" id="image-pp">
         </div>
         <h1 class="name span-content">
-            <span class="greetings">,</span>
+            <span class="greetings"></span>
             <br>
             <span class="span-content-my-info"> I'm <span class="span-content" style="text-transform: uppercase; color: #4b4b4b; letter-spacing: 0.08em;">Nischal Pradhan</span></span>
             <br>
             <div class="aim">
-                <span class="span-content span-role">Data Scientist and Machine Learning Engineer</span>
+                <span class="span-content span-role">Aspiring AI and Data Science Student</span>
             </div>
 
             <span class="sm-subscript">* Student of AI and Data Science 
@@ -529,6 +529,44 @@
     </footer>
 
     <script>
+        // Greetings animation
+        const greetings = ["Hello", "Bonjour!"];
+        const typingSpeed = 150;
+        const backspaceSpeed = 50;
+        const delayBetween = 1500;
+
+        let currentIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const greetingSpan = document.querySelector(".greetings");
+
+        function typeGreeting() {
+            const currentText = greetings[currentIndex];
+
+            if (!isDeleting) {
+                greetingSpan.textContent = currentText.slice(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(typeGreeting, delayBetween);
+                    return;
+                }
+            } else {
+                greetingSpan.textContent = currentText.slice(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    currentIndex = (currentIndex + 1) % greetings.length;
+                }
+            }
+
+            setTimeout(typeGreeting, isDeleting ? backspaceSpeed : typingSpeed);
+        }
+
+        typeGreeting();
+
+
         // scroll fade-in animation
         const animatedItems = [];
 

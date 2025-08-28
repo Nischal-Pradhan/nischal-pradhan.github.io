@@ -236,7 +236,7 @@ body {
     filter: grayscale(100%);
 }
 
-.greetings::before {
+/* .greetings::before {
     font-size: 48px;
     content: "Hello";
     animation: animate-greeting infinite 3s;
@@ -249,6 +249,16 @@ body {
         content: "Bonjour!";
         transform: scale(0.8);
     }
+} */
+
+.greetings {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    border-right: 2px solid black; /* cursor effect */
+    padding-right: 4px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .name {
