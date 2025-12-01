@@ -7,13 +7,13 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* cursor: none !important; */
+    cursor: none !important;
     font-family: "Poppins", sans-serif;
     font-weight: 200 !important;
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
@@ -26,16 +26,18 @@ li {
 }
 
 :root {
-    --color-primary: #151515;
+    --color-primary: #000;
     --color-secondary: #fff;
     --color-dark: #111111;
     --color-dark-1: #4b4b4b;
+    --color-light: #f5f5f5;
+    --color-light-1: #c2c2c2;
 }
 
 ::selection {
-    background: var(--color-primary);
-    color: var(--color-secondary);
-    text-shadow: 0 0 15px var(--color-secondary);
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    text-shadow: 0 0 15px var(--color-dark);
 }
 
 ::-webkit-scrollbar {
@@ -43,11 +45,11 @@ li {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     border-radius: 2px;
 }
 
@@ -55,12 +57,36 @@ li {
     background: var(--color-dark);
 }
 
+/* bg */
+
+#neural-bg {
+    filter: brightness(0.35) contrast(0.80);
+}
+
+
+#neural-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    pointer-events: none;
+    background: #111; /* deep calm background */
+}
+
+/* Parallax wrapper */
+#parallax-wrapper {
+    position: relative;
+    z-index: 2; /* keeps content above background */
+}
+
 
 /** cursor trailer start **/
 
 #trailer {
-    height: 28px;
-    width: 28px;
+    height: 38px;
+    width: 38px;
     background-color: transparent;
     border: 2px solid var(--color-secondary);
     border-radius: 20px 20px 20px 20px;
@@ -72,7 +98,7 @@ li {
     pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
-    box-shadow: 2px 5px 20px var(--color-primary);
+    box-shadow: 0 0 20px var(--color-light);
     -webkit-border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -ms-border-radius: 20px 20px 20px 20px;
@@ -109,7 +135,7 @@ body {
     height: 0.3rem;
     width: 0%;
     position: fixed;
-    background: var(--color-primary);
+    background: var(--color-light-1);
     z-index: 9999;
 }
 
@@ -170,8 +196,8 @@ body {
 }
 
 .head-nav {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    background-color: #111111a9;
+    color: var(--color-secondary);
     display: flex;
     align-items: center;
     text-align: right;
@@ -206,7 +232,7 @@ body {
     clip-path: circle();
     height: 300px;
     transform: translate(0%, 10%);
-    filter: drop-shadow(-55px 15px 10px var(--color-dark-1));
+    filter: drop-shadow(-55px 15px 10px var(--color-light));
     transition: 500ms ease;
     user-select: none;
     animation: imageLoad 1200ms;
@@ -226,9 +252,10 @@ body {
 .imgIcon img {
     filter: grayscale(100%);
     transition: transform 250ms ease, filter 250ms ease;
+    background: var(--color-dark-1);
 }
 .imgIcon:hover {
-    background: var(--color-dark-1);
+    background: var(--color-primary);
 }
 
 .imgIcon img:hover {
@@ -255,10 +282,12 @@ body {
     font-size: 48px;
     text-transform: uppercase;
     font-weight: 400 !important;
-    border-right: 2px solid black; /* cursor effect */
+    border-right: 2px solid var(--color-secondary); /* cursor effect */
     padding-right: 4px;
     white-space: nowrap;
     overflow: hidden;
+    color: var(--color-secondary);
+    text-shadow: 0 0 20px var(--color-secondary);
 }
 
 .name {
@@ -271,11 +300,12 @@ body {
     transform: translate(-50%, -50%);
     font-size: 36px;
     user-select: none;
+    color: var(--color-light-1);
 }
 
 .aim {
     overflow: hidden;
-    border-right: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-secondary);
     white-space: nowrap;
     margin: 0 auto;
     font-size: 42px;
@@ -307,7 +337,7 @@ body {
         border-color: transparent;
     }
     50% {
-        border-color: var(--color-primary);
+        border-color: var(--color-secondary);
     }
 }
 
@@ -426,19 +456,19 @@ body {
     cursor: pointer;
     font-size: 20px;
     text-transform: uppercase;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     font-weight: 600;
     transition: 0.2s ease-in;
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-light);
     border-radius: 15px;
     font-weight: 400 !important;
 }
 
 .download-btn:hover {
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     border-radius: 0;
     scale: 1.02;
 }
@@ -470,8 +500,8 @@ body {
     -webkit-transform: rotate(45deg);
     /* Chrome, Safari, Opera */
     transform: rotate(45deg);
-    border-right: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
     margin: 0 0 3px 4px;
     width: 16px;
     height: 16px;
@@ -520,7 +550,7 @@ body {
     width: 24px;
     border-radius: 14px;
     transform: none;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-secondary);
     top: 170px;
 }
 
@@ -529,11 +559,11 @@ body {
     width: 2px;
     display: block;
     margin: 5px auto;
-    background: var(--color-primary);
+    background: var(--color-secondary);
     position: relative;
     height: 4px;
     width: 4px;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-secondary);
     -webkit-border-radius: 8px;
     border-radius: 8px;
 }
@@ -680,6 +710,7 @@ body {
     font-size: 42px;
     margin: auto 2rem;
     font-weight: 400 !important;
+    color: var(--color-secondary);
 }
 
 .flex-container {
@@ -696,6 +727,7 @@ body {
     text-align: justify;
     font-size: 20px;
     padding: 2rem;
+    color: var(--color-light);
 }
 
 .right-flex {
@@ -709,7 +741,7 @@ body {
     height: 550px;
     padding: 10px;
     transition: 0.5s ease-in-out;
-    border: 2px double var(--color-primary);
+    border: 2px double var(--color-secondary);
     user-select: none;
     filter: grayscale(100%);
 }
@@ -730,8 +762,8 @@ body {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--color-primary);
-    border-top: 2px solid var(--color-primary);
+    color: var(--color-secondary);
+    border-top: 2px solid var(--color-secondary);
     font-weight: 400 !important;
 }
 
@@ -832,7 +864,7 @@ body {
 }
 
 
-/* projects section */
+/* 7s section */
 
 .project-section {
     position: relative;
@@ -845,13 +877,14 @@ body {
     font-size: 42px;
     margin: 2rem;
     font-weight: 400 !important;
+    color: var(--color-secondary);
 }
 
 .flex-container>.card {
     height: 350px;
     margin: 32px;
     border-radius: 15px;
-    background-color: var(--color-primary);
+    background-color: #111111b0;
     color: var(--color-secondary);
     text-align: center;
     display: flex;
@@ -909,7 +942,7 @@ body {
     font-size: 20px;
     text-transform: uppercase;
     color: var(--color-primary);
-    border-top: 2px solid var(--color-primary);
+    border-top: 2px solid var(--color-secondary);
     transition: 0.2s ease-out;
 }
 
@@ -972,8 +1005,8 @@ body {
 
 .more-projects>li:hover {
     text-shadow: 0 0 5px var(--color-secondary);
-    letter-spacing: 5px;
-    scale: 1.8;
+    letter-spacing: 2px;
+    scale: 1.3;
     font-weight: bolder;
 }
 
@@ -991,6 +1024,7 @@ body {
     font-size: 42px;
     margin: 2rem;
     font-weight: 400 !important;
+    color: var(--color-secondary);
 }
 
 .blogs {
@@ -1004,12 +1038,12 @@ body {
     position: relative;
     background-color: var(--color-grey-5);
     border-radius: 5px;
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 20px var(--color-dark);
     transition: all 0.4s ease-in-out;
 }
 
 .blogs .blog:hover {
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 20px var(--color-light-1);
     transform: translateY(-5px);
     transition: all 0.4s ease-in-out;
 }
@@ -1017,7 +1051,7 @@ body {
 .blogs .blog:hover img {
     filter: grayscale(0);
     transform: scale(1.1);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 15px var(--color-dark-1);
     border-radius: 10px;
 }
 
@@ -1043,16 +1077,16 @@ body {
     margin-bottom: 0.7rem;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
-    color: var(--color-dark-1);
+    color: var(--color-secondary);
     font-weight: 600 !important;
 }
 
 .blogs .blog .blog-text h4:hover {
-    color: var(--color-primary);
+    color: var(--color-light-1);
 }
 
 .blogs .blog .blog-text p {
-    color: var(--color-dark-1);
+    color: var(--color-light);
     line-height: 2rem;
     padding-bottom: 1rem;
     font-size: 20px;
@@ -1135,6 +1169,7 @@ body {
     margin: 2rem;
     text-transform: uppercase;
     font-weight: 400 !important;
+    color: var(--color-secondary)
 }
 
 .contact-me {
@@ -1146,19 +1181,19 @@ body {
     cursor: pointer;
     font-size: 20px;
     text-transform: uppercase;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     font-weight: 600;
     transition: 0.2s ease-in;
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-light-1);
     border-radius: 15px;
     font-weight: 400 !important;
 }
 
 .contact-me:hover {
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     border-radius: 0;
     scale: 1.02;
 }
@@ -1174,7 +1209,7 @@ body {
 /* footer */
 
 footer {
-    background-color: var(--color-primary);
+    background-color: #111111a9;
     color: var(--color-secondary);
     padding: 20px 0;
 }

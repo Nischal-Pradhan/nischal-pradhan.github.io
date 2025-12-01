@@ -79,6 +79,15 @@
 </style>
 
 <body>
+    <!-- bg -->
+    <canvas id="neural-bg"></canvas>
+</div>
+    <!-- cursor trailer -->
+    <div id="trailer">
+    </div>
+
+    <div id="parallax-wrapper">
+
     <!-- Top scrolling alert bar -->
     <div class="top-alert">
     <div class="ticker">
@@ -102,12 +111,6 @@
         <button class="top-alert__close" id="closeAlert">×</button>
     </div>
 
-
-
-    <!-- cursor trailer -->
-    <div id="trailer">
-    </div>
-
     <!-- go to top -->
     <button onclick="goToTop()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
 
@@ -115,7 +118,7 @@
 
     <header class="head-nav">
         <h1 class="span-content">
-            #My<span class="span-content" style="color:#4b4b4b">Portfolio ☯︎ </span>
+            #My<span class="span-content" style="color:#929292">Portfolio ☯︎ </span>
         </h1>
         <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     </header>
@@ -160,7 +163,7 @@
         <h1 class="name span-content">
             <span class="greetings"></span>
             <br>
-            <span class="span-content-my-info"> I am <span class="span-content" style="text-transform: uppercase; color: #4b4b4b; letter-spacing: 0.08em;">Nischal Pradhan</span></span>
+            <span class="span-content-my-info"> I am <span class="span-content" style="text-transform: uppercase; color: rgb(255, 255, 255); letter-spacing: 0.08em;">Nischal Pradhan</span></span>
             <br>
             <div class="aim">
                 <span class="span-content span-role">Aspiring AI and Data Science Student</span>
@@ -192,7 +195,7 @@
 
     <section id="about" class="about-section fade-scroll-item">
         <h1>
-            About<span class="span-content" style="color:#4b4b4b">&nbsp;Me</span>
+            About<span class="span-content" style="color:#929292">&nbsp;Me</span>
         </h1>
         <div class="flex-container">
             <div class="left-flex">
@@ -236,7 +239,7 @@
 
     <section id="projects" class="project-section fade-scroll-item">
         <h1>
-            My<span class="span-content" style="color:#4b4b4b">&nbsp;Projects</span>
+            <span class="span-content" style="color:#929292">My&nbsp;</span>Projects
         </h1>
 
         <div class="flex-container content-above" id="contentAbove">
@@ -601,7 +604,7 @@
         });
 
     </script>
-
+</div>
 </body>
 
 </html>
