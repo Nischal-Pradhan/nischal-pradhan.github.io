@@ -60,7 +60,7 @@ li {
 /* bg */
 
 #neural-bg {
-    filter: brightness(0.35) contrast(0.80);
+    filter: brightness(0.65) contrast(0.85);
 }
 
 
@@ -884,7 +884,7 @@ body {
     height: 350px;
     margin: 32px;
     border-radius: 15px;
-    background-color: #111111b0;
+    background-color: #11111160;
     color: var(--color-secondary);
     text-align: center;
     display: flex;
