@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    cursor: none !important;
+    /* cursor: none !important; */
     font-family: "Poppins", sans-serif;
     font-weight: 200 !important;
 }

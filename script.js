@@ -19,7 +19,7 @@ window.onmousemove = e => {
     }
 
     trailer.animate(keyframes, {
-        duration: 5,
+        duration: 200,
         fill: "forwards"
 
     })
