@@ -750,6 +750,7 @@ body {
     scale: 1.07;
     padding: 0;
     border: 2px double transparent;
+    box-shadow: 0 0 20px var(--color-secondary);
     filter: grayscale(0%);
 }
 
