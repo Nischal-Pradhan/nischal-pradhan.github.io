@@ -1,181 +1,68 @@
-# Nischal Pradhan — Personal Portfolio || 
+# Nischal Pradhan — Personal Portfolio
 
-> A personal portfolio website built with **Python Flask**, showcasing my projects, skills, work experience, and blog — migrated from a static HTML/CSS/JS site to a full server-side rendered Flask application.
+> A personal portfolio website built with **HTML, CSS, and JavaScript**, hosted on **GitHub Pages** — featuring an animated neural network background, smooth parallax scrolling, and a fully dark-themed design.
 
-🌐 **Live Site:** [nischal-pradhan.onrender.com](https://nischal-pradhan.onrender.com) *(update once deployed)*  
-📄 **Old Static Site:** [nischal-pradhan.github.io](https://nischal-pradhan.github.io)
-
----
-
-## 📸 Preview
-
-| Home | Projects | Contact |
-|------|----------|---------|
-| ![Home](static/img/preview-home.png) | ![Projects](static/img/preview-projects.png) | ![Contact](static/img/preview-contact.png) |
-
-> *(Add screenshots to `static/img/` and update paths above)*
+🌐 **Live:** [nischal-pradhan.github.io](https://nischal-pradhan.github.io)
 
 ---
 
-## 🚀 Features
+## About
 
-- **Animated neural network** background on the home page
-- **Cursor trailer** effect across all pages
-- **Scroll progress bar** and parallax effects
-- **Typing greeting** animation (Hello, Bonjour!)
-- **Hamburger overlay** navigation menu
-- **Fade-in on scroll** animations for sections
-- **Image/video hover** on project cards
-- **Scrolling marquee** tech skill icons (About page)
-- **Contact form** with Flask POST handling and flash messages
-- **Downloadable ATS-optimized CV** (PDF)
-- **Fully dark themed** across all pages
-- **Responsive design** for mobile and desktop
+This is my personal portfolio website showcasing my skills, projects, work experience, and blog. It is designed and developed entirely from scratch — no templates, no frameworks — just pure HTML, CSS, and Vanilla JavaScript.
 
 ---
 
-## 🛠️ Tech Stack
+## What's Inside
 
-| Layer | Technology |
-|-------|-----------|
-| Backend | Python, Flask |
-| Templating | Jinja2 |
-| Frontend | HTML5, CSS3, JavaScript (Vanilla) |
-| Icons | Font Awesome 4.7 |
-| Fonts | Google Fonts (Poppins) |
-| Deployment | Render (planned) |
-| Version Control | Git, GitHub |
+### Home
+A hero section with an animated neural network canvas background, custom cursor trailer, scroll progress bar, parallax scrolling, and a typing greeting animation cycling through languages. Includes a direct CV download.
 
----
+### About Me
+An overview of who I am, a scrolling marquee of my tech skills with icons, my education history, and my professional work experience as a Junior Python Developer.
 
-## 📁 Project Structure
+### Projects
+Featured project cards with image hover reveal effects and a video hover on the 2025 USA Election Prediction card. Each card links directly to the GitHub repository.
 
-```
-portfolio-flask/
-├── app.py                        # Flask app & route definitions
-├── requirements.txt              # Python dependencies
-├── Procfile                      # For Render/Gunicorn deployment
-├── README.md                     # You are here
-│
-├── templates/                    # Jinja2 HTML templates
-│   ├── base.html                 # Base layout (shared <head>, CDN links)
-│   ├── index.html                # Home page  (/)
-│   ├── about.html                # About Me   (/about)
-│   ├── projects.html             # Projects   (/projects)
-│   ├── blog.html                 # Blog       (/blog)
-│   └── contact.html              # Contact    (/contact)
-│
-└── static/
-    ├── css/
-    │   └── style.css             # Main stylesheet (dark theme)
-    ├── js/
-    │   └── script.js             # Neural bg, parallax, nav, scroll
-    ├── docs/
-    │   └── CV-Nischal-Pradhan.pdf  # ATS-optimized CV
-    └── img/
-        ├── icons/                # Tech skill icons (14 SVG/PNG)
-        └── projects/             # Project screenshots & demo videos
-```
+| Project | Tech |
+|---------|------|
+| 2025 USA Election Prediction | Python, Machine Learning, Data Visualization |
+| Movie Recommendation System | Python, K-Means Clustering, Collaborative Filtering |
+| Yatayat Bus Management System | Python, Django, Full-Stack |
+| ReactJS APOD App | ReactJS, NASA API |
+| Computer Vision | Python, OpenCV |
+| Personal Portfolio | HTML, CSS, JavaScript |
+
+### Blog
+A collection of AI/ML articles covering topics like machine learning algorithms, deep learning, hyperparameter tuning, and model optimization.
+
+### Contact
+A contact form alongside social links and personal info.
 
 ---
 
-## ⚙️ Local Setup
+## Design Highlights
 
-### Prerequisites
-- Python 3.10+
-- pip
-
-### Steps
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Nischal-Pradhan/flask-portfolio.git
-cd flask-portfolio/portfolio-flask
-
-# 2. Create and activate a virtual environment
-python -m venv venv
-
-# On macOS/Linux:
-source venv/bin/activate
-
-# On Windows:
-venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Run the development server
-python app.py
-```
-
-Then open your browser at: **http://127.0.0.1:5000**
+- Dark theme throughout — all pages consistent
+- Animated neural network canvas (custom JavaScript)
+- Custom circular cursor trailer
+- Fullscreen hamburger overlay navigation
+- Smooth fade-in on scroll for every section
+- Scrolling ticker alert bar
+- Fully responsive for mobile and desktop
 
 ---
 
-## 🌍 Deployment (Render)
+## Tech
 
-This app is configured for deployment on [Render](https://render.com) — free tier available.
-
-### Steps
-
-1. Push your project to GitHub
-2. Go to [render.com](https://render.com) → **New → Web Service**
-3. Connect your GitHub repo
-4. Set the following:
-
-| Setting | Value |
-|---------|-------|
-| **Build Command** | `pip install -r requirements.txt` |
-| **Start Command** | `gunicorn app:app` |
-| **Environment** | Python 3 |
-
-5. Click **Deploy** — your app goes live at `https://your-app.onrender.com`
-
-> Make sure `gunicorn` is in your `requirements.txt` and a `Procfile` exists:
-> ```
-> web: gunicorn app:app
-> ```
+`HTML5` &nbsp; `CSS3` &nbsp; `JavaScript` &nbsp; `Font Awesome 4.7` &nbsp; `Google Fonts (Poppins)` &nbsp; `GitHub Pages`
 
 ---
 
-## 📄 Pages & Routes
+## Links
 
-| Route | Page | Description |
-|-------|------|-------------|
-| `/` | Home | Hero section, about preview, project cards, blog preview |
-| `/about` | About Me | Skills marquee, education, work experience |
-| `/projects` | Projects | Detailed project cards with image/video hover |
-| `/blog` | Blog | AI/ML blog posts grid |
-| `/contact` | Contact | Contact form (Flask POST) + info panel |
+- 💼 [LinkedIn](https://www.linkedin.com/in/nischal-pradhan-944b651b3)
+- 🐙 [GitHub](https://github.com/Nischal-Pradhan)
 
 ---
-
-## 📬 Contact Form
-
-The contact form uses Flask's `request.form` and `flash()` for user feedback.  
-To enable **email sending**, integrate Flask-Mail:
-
-```bash
-pip install Flask-Mail
-```
-
-```python
-# In app.py
-from flask_mail import Mail, Message
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
-```
-
----
-
-## 🔗 Links
-
-- 💼 LinkedIn: [linkedin.com/in/nischal-pradhan](https://www.linkedin.com/in/nischal-pradhan-944b651b3)
-- 🐙 GitHub: [github.com/Nischal-Pradhan](https://github.com/Nischal-Pradhan)
-
----
-
-## 📝 License
 
 © 2025 Nischal Pradhan. All rights reserved.
